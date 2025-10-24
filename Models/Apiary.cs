@@ -1,0 +1,22 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ApiaryManagementSystem.Models
+{
+    public class Apiary
+    {
+        [Key]
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public bool IsMobile { get; set; }
+        public string? Address { get; set; }
+
+        public int ApiaryStatusId { get; set; }
+        public int OwnerId { get; set; }
+
+        [NotMapped]
+        public ApiaryStatus? ApiaryStatus { get; set; }
+        [NotMapped]
+        public User? Owner { get; set; }
+    }
+}

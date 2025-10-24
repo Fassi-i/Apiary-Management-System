@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\ApiaryManagementSystem\\ApiaryManagementSystem.csproj": {}
+    "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\ApiaryManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\ApiaryManagementSystem\\ApiaryManagementSystem.csproj": {
+    "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\ApiaryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\ApiaryManagementSystem\\ApiaryManagementSystem.csproj",
+        "projectUniqueName": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\ApiaryManagementSystem.csproj",
         "projectName": "ApiaryManagementSystem",
-        "projectPath": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\ApiaryManagementSystem\\ApiaryManagementSystem.csproj",
+        "projectPath": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\ApiaryManagementSystem.csproj",
         "packagesPath": "C:\\Users\\Fassi\\.nuget\\packages\\",
-        "outputPath": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\ApiaryManagementSystem\\obj\\",
+        "outputPath": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\is\\programss\\Visual Studio 2025\\Shared\\NuGetPackages"
