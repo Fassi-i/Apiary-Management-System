@@ -12,7 +12,6 @@ namespace ApiaryManagementSystem.Models
 
         public int CropId { get; set; }
 
-        [NotMapped]
         public Crop? Crop { get; set; }
     }
 }

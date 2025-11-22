@@ -5,12 +5,40 @@
       "PackagePath": "staticwebassets\\ApiaryManagementSystem.04wpkhvfj4.bundle.scp.css"
     },
     {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
+      "PackagePath": "staticwebassets\\css\\custom-date.css"
+    },
+    {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "PackagePath": "staticwebassets\\css\\custom-multiple-select.css"
+    },
+    {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
+      "PackagePath": "staticwebassets\\css\\custom-select.css"
+    },
+    {
       "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
+      "PackagePath": "staticwebassets\\js\\custom-date.js"
+    },
+    {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
+      "PackagePath": "staticwebassets\\js\\custom-multiple-select.js"
+    },
+    {
+      "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
+      "PackagePath": "staticwebassets\\js\\custom-select.js"
     },
     {
       "Id": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\site.js",

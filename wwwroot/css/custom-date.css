@@ -1,0 +1,66 @@
+﻿/* Стили для кастомного date input */
+.date-input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.date-input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: normal;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+    .date-input:focus {
+        outline: none;
+        border-color: #FFC107;
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    }
+
+    .date-input::placeholder {
+        color: #999;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: normal;
+    }
+
+.date-input-container::after {
+    content: "📅";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.date-input:focus + .date-input-container::after {
+    color: #FF9800;
+}
+
+/* Стили для скрытого input */
+.date-input-container input[type="hidden"] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .date-input {
+        font-size: 14px;
+        padding: 10px 35px 10px 10px;
+    }
+
+    .date-input-container::after {
+        font-size: 16px;
+        right: 10px;
+    }
+}

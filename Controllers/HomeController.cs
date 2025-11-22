@@ -15,6 +15,7 @@ namespace ApiaryManagementSystem.Controllers
 
         public IActionResult Index()
         {
+            //throw new Exception("Simulated crash!");
             return View();
         }
 

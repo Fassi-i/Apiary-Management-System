@@ -14,11 +14,8 @@ namespace ApiaryManagementSystem.Models
         public int ProductId { get; set; }
         public int UnitId { get; set; }
 
-        [NotMapped]
         public BeeColony? BeeColony { get; set; }
-        [NotMapped]
         public Product? Product { get; set; }
-        [NotMapped]
         public Unit? Unit { get; set; }
     }
 }

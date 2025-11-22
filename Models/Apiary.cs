@@ -14,9 +14,7 @@ namespace ApiaryManagementSystem.Models
         public int ApiaryStatusId { get; set; }
         public int OwnerId { get; set; }
 
-        [NotMapped]
         public ApiaryStatus? ApiaryStatus { get; set; }
-        [NotMapped]
         public User? Owner { get; set; }
     }
 }

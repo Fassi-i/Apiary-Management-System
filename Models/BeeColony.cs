@@ -14,9 +14,7 @@ namespace ApiaryManagementSystem.Models
         public int ApiaryId { get; set; }
         public int? ParentColonyId { get; set; }
 
-        [NotMapped]
         public Apiary? Apiary { get; set; }
-        [NotMapped]
         public BeeColony? ParentColony { get; set; }
     }   
 }

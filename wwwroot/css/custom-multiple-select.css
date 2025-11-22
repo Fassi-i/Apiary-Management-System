@@ -1,0 +1,143 @@
+﻿.custom-multiselect {
+    position: relative;
+    width: 100%;
+}
+
+.multiselect-trigger {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    .multiselect-trigger::after {
+        content: "▼";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #666;
+        transition: all 0.3s ease;
+    }
+
+    .multiselect-trigger.active::after {
+        transform: translateY(-50%) rotate(180deg);
+        color: #FF9800;
+    }
+
+    .multiselect-trigger.placeholder {
+        color: #999;
+    }
+
+    .multiselect-trigger:hover {
+        border-color: #ccc;
+    }
+
+    .multiselect-trigger:focus,
+    .multiselect-trigger.active {
+        outline: none;
+        border-color: #FFC107;
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    }
+
+.multiselect-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #FFC107;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .multiselect-options.active {
+        display: block;
+    }
+
+.multiselect-option {
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+    .multiselect-option:hover {
+        background: #FFF3E0;
+    }
+
+    .multiselect-option.selected {
+        background: #FFC107;
+        color: #333;
+        font-weight: 600;
+    }
+
+        .multiselect-option.selected::before {
+            content: "✓";
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+    .multiselect-option:last-child {
+        border-bottom: none;
+    }
+
+    .multiselect-option.disabled {
+        color: #999;
+        background: #f9f9f9;
+        cursor: not-allowed;
+    }
+
+.select-hidden {
+    display: none;
+}
+
+/* выбранные опции */
+.multiselect-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.multiselect-tag {
+    display: flex;
+    align-items: center;
+    background: #FFC107;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.multiselect-tag-remove {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    margin-left: 4px;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+    .multiselect-tag-remove:hover {
+        background: rgba(0,0,0,0.1);
+    }

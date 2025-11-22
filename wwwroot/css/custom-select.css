@@ -1,0 +1,179 @@
+﻿.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.select-trigger {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    .select-trigger::after {
+        content: "▼";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #666;
+        transition: all 0.3s ease;
+    }
+
+    .select-trigger.active::after {
+        transform: translateY(-50%) rotate(180deg);
+        color: #FF9800;
+    }
+
+    .select-trigger:hover {
+        border-color: #ccc;
+    }
+
+    .select-trigger:focus,
+    .select-trigger.active {
+        outline: none;
+        border-color: #FFC107;
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    }
+
+.select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #FFC107;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .select-options.active {
+        display: block;
+    }
+
+.select-option {
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .select-option:hover {
+        background: #FFF3E0;
+    }
+
+    .select-option.selected {
+        background: #FFC107;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .select-option:last-child {
+        border-bottom: none;
+    }
+
+    .select-option.disabled {
+        color: #999;
+        background: #f9f9f9;
+        cursor: not-allowed;
+    }
+
+.select-hidden {
+    display: none;
+}
+
+/* Крестик */
+.select-trigger {
+    width: 100%;
+    padding: 12px 60px 12px 12px; 
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .select-trigger::after {
+        content: "▼";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #666;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+
+.select-clear {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    z-index: 3;
+}
+
+    .select-clear:hover {
+        background: #f5f5f5;
+        color: #f44336;
+    }
+
+.select-trigger.has-value .select-clear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.select-trigger:not(.has-value) .select-clear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.select-trigger.active::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: #FF9800;
+}
+
+.select-trigger {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 60px; 
+}
+/* Плейсхолдер */
+.select-trigger-text.placeholder {
+    color: #999;
+}
+
+.select-trigger:not(.has-value) .select-trigger-text {
+    color: #999;
+}

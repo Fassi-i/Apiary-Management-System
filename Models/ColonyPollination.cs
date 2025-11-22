@@ -13,9 +13,7 @@ namespace ApiaryManagementSystem.Models
         public int BeeColonyId { get; set; }
         public int PollinationLocationId { get; set; }
 
-        [NotMapped]
         public BeeColony? BeeColony { get; set; }
-        [NotMapped]
         public PollinationLocation? PollinationLocation { get; set; }
     }
 }

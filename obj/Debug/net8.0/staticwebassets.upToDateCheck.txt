@@ -1,5 +1,12 @@
+wwwroot\css\custom-date.css
+wwwroot\css\custom-multiple-select.css
+wwwroot\css\custom-select.css
 wwwroot\css\site.css
+wwwroot\css\style.css
 wwwroot\favicon.ico
+wwwroot\js\custom-date.js
+wwwroot\js\custom-multiple-select.js
+wwwroot\js\custom-select.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

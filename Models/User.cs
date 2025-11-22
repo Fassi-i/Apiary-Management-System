@@ -15,7 +15,6 @@ namespace ApiaryManagementSystem.Models
 
         public int PositionId { get; set; }
 
-        [NotMapped]
-        public Position? Position;
+        public Position? Position { get; set; }
     }
 }

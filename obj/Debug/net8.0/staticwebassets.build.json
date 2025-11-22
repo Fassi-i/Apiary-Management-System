@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NCN2p/8/B6cK10tTnY/FhtxzyERlt+TCH1kuUL6UDIY=",
+  "Hash": "jk8ocylyTmWpAzgE6Ip5XCx0ixzg4wDfHtkR3VFvW7c=",
   "Source": "ApiaryManagementSystem",
   "BasePath": "_content/ApiaryManagementSystem",
   "Mode": "Default",
@@ -59,6 +59,69 @@
       "OriginalItemSpec": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ApiaryManagementSystem.bundle.scp.css"
     },
     {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/custom-date#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qgfq1b13pr",
+      "Integrity": "yk0A7bXyiD8odKiBl0wKRtzHKJqV2Bwmc9UN+e+VQnw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom-date.css"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/custom-multiple-select#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1plc6am9ux",
+      "Integrity": "1cYK7UGhpcsYQzffSC5iVf+eztks3nWSO2E1C6PiOwo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom-multiple-select.css"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/custom-select#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q8cdv86703",
+      "Integrity": "Oj5DgBth7p9aNZR8PEx+R1aL2TDJFMcvZ0tuSMTypY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom-select.css"
+    },
+    {
       "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
       "SourceId": "ApiaryManagementSystem",
       "SourceType": "Discovered",
@@ -80,6 +143,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2ts8101v4n",
+      "Integrity": "1rR4YWX2Tg0Y+GtEt7xgyl+2V6WUe4QEZ4Ud87/rNyg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\favicon.ico",
       "SourceId": "ApiaryManagementSystem",
       "SourceType": "Discovered",
@@ -99,6 +183,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "js/custom-date#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5g88qf1o12",
+      "Integrity": "Ox0S1Un23CvTpWVRYXLJhBMKtZZ0NV0spf7kZBdeI2Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom-date.js"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "js/custom-multiple-select#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qpnyut7bwh",
+      "Integrity": "jk5YhXSRCu0rP7BAMTaUHPtURCrNIg0jgz8aXR9NXnU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom-multiple-select.js"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "js/custom-select#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1v17qbp56p",
+      "Integrity": "LTueV4ytqTxV9FnuBrG28dUS934wkE7jJGNNa42yq60=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom-select.js"
     },
     {
       "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\site.js",
@@ -1485,6 +1632,252 @@
       ]
     },
     {
+      "Route": "css/custom-date.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1566"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yk0A7bXyiD8odKiBl0wKRtzHKJqV2Bwmc9UN+e+VQnw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:22:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yk0A7bXyiD8odKiBl0wKRtzHKJqV2Bwmc9UN+e+VQnw="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-date.qgfq1b13pr.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1566"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yk0A7bXyiD8odKiBl0wKRtzHKJqV2Bwmc9UN+e+VQnw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:22:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qgfq1b13pr"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom-date.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yk0A7bXyiD8odKiBl0wKRtzHKJqV2Bwmc9UN+e+VQnw="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-multiple-select.1plc6am9ux.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1cYK7UGhpcsYQzffSC5iVf+eztks3nWSO2E1C6PiOwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1plc6am9ux"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom-multiple-select.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1cYK7UGhpcsYQzffSC5iVf+eztks3nWSO2E1C6PiOwo="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-multiple-select.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1cYK7UGhpcsYQzffSC5iVf+eztks3nWSO2E1C6PiOwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1cYK7UGhpcsYQzffSC5iVf+eztks3nWSO2E1C6PiOwo="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-select.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4159"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Oj5DgBth7p9aNZR8PEx+R1aL2TDJFMcvZ0tuSMTypY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Oj5DgBth7p9aNZR8PEx+R1aL2TDJFMcvZ0tuSMTypY0="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-select.q8cdv86703.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4159"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Oj5DgBth7p9aNZR8PEx+R1aL2TDJFMcvZ0tuSMTypY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q8cdv86703"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom-select.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Oj5DgBth7p9aNZR8PEx+R1aL2TDJFMcvZ0tuSMTypY0="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1567,6 +1960,88 @@
       ]
     },
     {
+      "Route": "css/style.2ts8101v4n.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5461"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rR4YWX2Tg0Y+GtEt7xgyl+2V6WUe4QEZ4Ud87/rNyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2ts8101v4n"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rR4YWX2Tg0Y+GtEt7xgyl+2V6WUe4QEZ4Ud87/rNyg="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5461"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rR4YWX2Tg0Y+GtEt7xgyl+2V6WUe4QEZ4Ud87/rNyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:00:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rR4YWX2Tg0Y+GtEt7xgyl+2V6WUe4QEZ4Ud87/rNyg="
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
       "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\favicon.ico",
       "Selectors": [],
@@ -1645,6 +2120,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-date.5g88qf1o12.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5780"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ox0S1Un23CvTpWVRYXLJhBMKtZZ0NV0spf7kZBdeI2Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 10:20:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5g88qf1o12"
+        },
+        {
+          "Name": "label",
+          "Value": "js/custom-date.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ox0S1Un23CvTpWVRYXLJhBMKtZZ0NV0spf7kZBdeI2Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-date.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5780"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ox0S1Un23CvTpWVRYXLJhBMKtZZ0NV0spf7kZBdeI2Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 10:20:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ox0S1Un23CvTpWVRYXLJhBMKtZZ0NV0spf7kZBdeI2Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-multiple-select.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jk5YhXSRCu0rP7BAMTaUHPtURCrNIg0jgz8aXR9NXnU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:02:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jk5YhXSRCu0rP7BAMTaUHPtURCrNIg0jgz8aXR9NXnU="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-multiple-select.qpnyut7bwh.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jk5YhXSRCu0rP7BAMTaUHPtURCrNIg0jgz8aXR9NXnU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:02:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qpnyut7bwh"
+        },
+        {
+          "Name": "label",
+          "Value": "js/custom-multiple-select.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jk5YhXSRCu0rP7BAMTaUHPtURCrNIg0jgz8aXR9NXnU="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-select.1v17qbp56p.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6321"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTueV4ytqTxV9FnuBrG28dUS934wkE7jJGNNa42yq60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:02:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1v17qbp56p"
+        },
+        {
+          "Name": "label",
+          "Value": "js/custom-select.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LTueV4ytqTxV9FnuBrG28dUS934wkE7jJGNNa42yq60="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom-select.js",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6321"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTueV4ytqTxV9FnuBrG28dUS934wkE7jJGNNa42yq60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Nov 2025 09:02:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LTueV4ytqTxV9FnuBrG28dUS934wkE7jJGNNa42yq60="
         }
       ]
     },
