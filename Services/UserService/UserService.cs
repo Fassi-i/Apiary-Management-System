@@ -14,7 +14,8 @@ namespace ApiaryManagementSystem.Services.UserService
             _context = context;
         }
 
-        public async Task<(bool IsSuccess, string Message)> CreateUserAsync(User user)
+        public async Task<(bool IsSuccess, string Message)> Create(User user)
+        //public async Task<(bool IsSuccess, string Message)> CreateUserAsync(User user)
         {
             try
             {
@@ -29,7 +30,8 @@ namespace ApiaryManagementSystem.Services.UserService
             
         }
 
-        public async Task<List<User>> GetAllUsersAsync()
+        public async Task<List<User>> GetAll()
+        //public async Task<List<User>> GetAllUsersAsync()
         {
             return await _context.Users.Include(u => u.Position).ToListAsync();
         }

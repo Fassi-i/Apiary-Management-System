@@ -17,6 +17,8 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a asp-controller="User" asp-action="Create">+User</a>
+                <a asp-controller="Apiary" asp-action="Create">+Apiary</a>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -27,7 +29,17 @@
                         </li>
                     </ul>
                 </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <span>@User.Identity.Name</span>
+                    <a asp-controller="Account" asp-action="Logout">Выйти</a>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">Войти</a>
+                }
             </div>
+            
         </nav>
     </header>
     <div class="container">

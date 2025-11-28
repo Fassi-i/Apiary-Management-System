@@ -1,12 +1,15 @@
 ﻿using ApiaryManagementSystem.Context;
 using ApiaryManagementSystem.Models;
 using ApiaryManagementSystem.Services.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiaryManagementSystem.Controllers
 {
+    [Authorize]
+    [Authorize(Policy = "AdminAndManager")]
     public class UserController : Controller
     {
         private readonly IUserService _service;
@@ -28,7 +31,7 @@ namespace ApiaryManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(User user)
         {
-            if (user.BirthDate == default(DateTime))
+            if (user.BirthDate == default(DateOnly))
             {
                 ModelState.AddModelError("BirthDate", "Введите корректную дату в формате дд.мм.гггг");
             }
@@ -38,7 +41,7 @@ namespace ApiaryManagementSystem.Controllers
 
                 try
                 {
-                    await _service.CreateUserAsync(user);
+                    await _service.Create(user);
                     return RedirectToAction("Create", "User");
                 }
                 catch
@@ -55,7 +58,7 @@ namespace ApiaryManagementSystem.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var users = await _service.GetAllUsersAsync();
+            var users = await _service.GetAll();
             return View(users);
         }
 

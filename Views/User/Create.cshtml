@@ -1,5 +1,4 @@
 ﻿@model User
-
 @{
     ViewData["Title"] = "Добавление пользователя";
 }
@@ -17,7 +16,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="myContainer">
         <div class="header">
             <h1>Добавление пользователя</h1>
             <p>Заполните следующую информацию</p>
@@ -36,13 +35,13 @@
             <div class="form-row">
                 <div class="form-group required">
                     <label asp-for="LastName" class="control-label">Фамилия</label>
-                    <input asp-for="LastName" class="form-control" />
+                    <input asp-for="LastName" id="LastName" class="form-control" />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
 
                 <div class="form-group required">
                     <label asp-for="FirstName" class="control-label">Имя</label>
-                    <input asp-for="FirstName" class="form-control" />
+                    <input asp-for="FirstName" id="FirstName" class="form-control" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
 
@@ -53,6 +52,7 @@
                 </div>
             </div>
 
+                
             <div class="form-group required">
                 <label asp-for="PositionId" class="control-label">Должность</label>
                 <select asp-for="PositionId" asp-items="ViewBag.Positions" class="select-input">

@@ -23,9 +23,11 @@ namespace ApiaryManagementSystem.Validators
                 .When(x => !string.IsNullOrEmpty(x.MiddleName));
 
             RuleFor(x => x.BirthDate)
-                .Must(date => date != default(DateTime)).WithMessage("Введите корректную дату в формате дд.мм.гггг")
-                .LessThan(DateTime.Now.AddYears(-14)).WithMessage("Возраст должен быть не менее 14 лет")
-                .GreaterThan(DateTime.Now.AddYears(-100)).WithMessage("Возраст должен быть не более 100 лет");
+                .Must(date => date != default(DateOnly)).WithMessage("Введите корректную дату в формате дд.мм.гггг")
+                .Must(date => date < DateOnly.FromDateTime(DateTime.Now.AddYears(-14)))
+                    .WithMessage("Возраст должен быть не менее 14 лет")
+                .Must(date => date > DateOnly.FromDateTime(DateTime.Now.AddYears(-100)))
+                    .WithMessage("Возраст должен быть не более 100 лет");
 
             RuleFor(x => x.Location)
                 .MaximumLength(200).WithMessage("Место проживания не должно превышать 200 символов");

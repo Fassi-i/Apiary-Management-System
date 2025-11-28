@@ -65,7 +65,7 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
         {
             try
             {
-                return await _context.Apiaries.ToListAsync();
+                return await _context.Apiaries.Include(a => a.Owner).ToListAsync();
             }
             catch (Exception ex)
             {

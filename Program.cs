@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using ApiaryManagementSystem.Validators;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using ApiaryManagementSystem.Services.ApiaryServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +24,27 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddScoped<IValidator<User>, UserValidator>();
+builder.Services.AddScoped<IValidator<Apiary>, ApiaryValidator>();
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IApiaryService, ApiaryService>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireClaim("PositionId", "1"));
+
+    options.AddPolicy("AdminAndManager", policy =>
+        policy.RequireClaim("PositionId", "1", "2"));
+});
+
+
+builder.Services.AddAuthentication("CustomAuth")
+    .AddCookie("CustomAuth", options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+    });
 
 var app = builder.Build();
 

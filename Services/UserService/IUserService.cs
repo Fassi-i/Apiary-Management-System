@@ -4,7 +4,7 @@ namespace ApiaryManagementSystem.Services.UserService
 {
     public interface IUserService
     {
-        Task<(bool IsSuccess, string Message)> CreateUserAsync(User user);
-        Task<List<User>> GetAllUsersAsync();
+        Task<(bool IsSuccess, string Message)> Create(User user);
+        Task<List<User>> GetAll();
     }
 }

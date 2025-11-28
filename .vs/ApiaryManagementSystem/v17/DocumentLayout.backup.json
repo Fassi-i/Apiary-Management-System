@@ -3,12 +3,72 @@
   "WorkspaceRootPath": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\apiary\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\apiary\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\controllers\\apiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:controllers\\apiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\validators\\apiaryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:validators\\apiaryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\services\\apiaryservice\\apiaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:services\\apiaryservice\\apiaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\services\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,42 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\services\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:services\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\js\\custom-select.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\js\\custom-select.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\js\\custom-multiple-select.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\js\\custom-multiple-select.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\js\\custom-date.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\js\\custom-date.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\custom-select.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\custom-select.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\custom-multiple-select.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\custom-multiple-select.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\wwwroot\\css\\custom-date.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:wwwroot\\css\\custom-date.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|d:\\is\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u043A\u043E\u043B\u043B\u0435\u0434\u0436\\diploma\\apiary-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFB6F1-1730-454D-8647-F87453FE8617}|ApiaryManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,174 +86,241 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "custom-select.js",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\custom-select.js",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-select.js",
-              "RelativeToolTip": "wwwroot\\js\\custom-select.js",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-07T20:55:59.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "custom-multiple-select.js",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\custom-multiple-select.js",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-multiple-select.js",
-              "RelativeToolTip": "wwwroot\\js\\custom-multiple-select.js",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-07T20:55:37.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAAO4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T20:54:37.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "custom-select.css",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\custom-select.css",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
-              "RelativeToolTip": "wwwroot\\css\\custom-select.css",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAqwKoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T20:53:56.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "custom-multiple-select.css",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\custom-multiple-select.css",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
-              "RelativeToolTip": "wwwroot\\css\\custom-multiple-select.css",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T20:53:29.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "custom-date.css",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\custom-date.css",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
-              "RelativeToolTip": "wwwroot\\css\\custom-date.css",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T20:53:15.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService\\IUserService.cs",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\IUserService.cs",
-              "RelativeToolTip": "Services\\UserService\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T10:04:39.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService\\UserService.cs",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService\\UserService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T09:58:30.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T09:58:01.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T09:29:28.641Z"
+              "WhenOpened": "2025-11-23T10:16:48.838Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserValidator.cs",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\UserValidator.cs",
-              "RelativeDocumentMoniker": "Validators\\UserValidator.cs",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\UserValidator.cs",
-              "RelativeToolTip": "Validators\\UserValidator.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T09:28:38.948Z"
+              "DocumentIndex": 5,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAewAUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-23T16:29:10.991Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-23T16:23:31.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T15:30:20.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\User\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Create.cshtml",
               "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\User\\Create.cshtml",
               "RelativeToolTip": "Views\\User\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T09:21:47.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T15:28:04.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "custom-date.js",
-              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\custom-date.js",
-              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\wwwroot\\js\\custom-date.js",
-              "RelativeToolTip": "wwwroot\\js\\custom-date.js",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-02T09:21:42.642Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T11:40:37.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T11:30:33.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T11:29:44.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAACsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T11:20:58.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T11:15:28.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T11:14:49.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Position.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Models\\Position.cs",
+              "RelativeDocumentMoniker": "Models\\Position.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Models\\Position.cs",
+              "RelativeToolTip": "Models\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T11:01:48.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserValidator.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\UserValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\UserValidator.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\UserValidator.cs",
+              "RelativeToolTip": "Validators\\UserValidator.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwB8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:43:57.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApiaryController.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\ApiaryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ApiaryController.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Controllers\\ApiaryController.cs",
+              "RelativeToolTip": "Controllers\\ApiaryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:20:45.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\IUserService.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\IUserService.cs",
+              "RelativeToolTip": "Services\\UserService\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:15:29.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\UserService.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\UserService\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService\\UserService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:12:44.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApiaryService.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\ApiaryService\\ApiaryService.cs",
+              "RelativeDocumentMoniker": "Services\\ApiaryService\\ApiaryService.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Services\\ApiaryService\\ApiaryService.cs",
+              "RelativeToolTip": "Services\\ApiaryService\\ApiaryService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:12:35.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApiaryValidator.cs",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\ApiaryValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\ApiaryValidator.cs",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Validators\\ApiaryValidator.cs",
+              "RelativeToolTip": "Validators\\ApiaryValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:32:21.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Apiary\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Apiary\\Create.cshtml",
+              "ToolTip": "D:\\is\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B 2\\\u041A\u043E\u043B\u043B\u0435\u0434\u0436\\DIPLOMA\\Apiary-Management-System\\Views\\Apiary\\Create.cshtml",
+              "RelativeToolTip": "Views\\Apiary\\Create.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T10:03:01.489Z"
             }
           ]
         }

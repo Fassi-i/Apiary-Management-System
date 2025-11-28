@@ -1,0 +1,69 @@
+﻿@model Apiary
+
+@{
+    ViewData["Title"] = "Добавление пчелосемьи";
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/custom-select.css">
+
+<div class="container">
+    <div class="myContainer">
+        <div class="header">
+            <h1>Добавление пчелосемьи</h1>
+            <p>Заполните следующую информацию</p>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <form asp-action="Create" method="post" id="beekeeperForm">
+            @Html.AntiForgeryToken()
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="Name" class="control-label">Название пасеки</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label asp-for="Owner" class="control-label">Заведующий пасекой</label>
+                <select asp-for="OwnerId" asp-items="ViewBag.Users" class="select-input">
+                    <option value="">Выберите владельца</option>
+                </select>
+                <span asp-validation-for="OwnerId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-group">
+                    <input asp-for="IsMobile" type="checkbox" />
+                    <span class="checkmark"></span>
+                    Выездная пасека
+                </label>
+                <div class="form-hint">Отметьте, если пасека является выездной</div>
+                <span asp-validation-for="IsMobile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Адрес пасеки</label>
+                <div class="form-hint">Для выездных пасек укажите основной или текущий адрес базирования</div>
+                <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Добавить
+            </button>
+        </form>
+    </div>
+</div>
+</style>
+<script src="~/js/custom-select.js"></script>
+<partial name="_ValidationScriptsPartial" />
