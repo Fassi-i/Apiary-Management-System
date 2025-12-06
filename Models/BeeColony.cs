@@ -12,9 +12,7 @@ namespace ApiaryManagementSystem.Models
         public DateTime? DisbandmentDate { get; set; }
 
         public int ApiaryId { get; set; }
-        public int? ParentColonyId { get; set; }
 
         public Apiary? Apiary { get; set; }
-        public BeeColony? ParentColony { get; set; }
     }   
 }

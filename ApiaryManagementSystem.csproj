@@ -22,7 +22,6 @@
   <ItemGroup>
     <Folder Include="Middlewares\" />
     <Folder Include="Services\ApiaryStatusService\" />
-    <Folder Include="Services\BeeColonyService\" />
     <Folder Include="Services\ColonyDiseaseService\" />
     <Folder Include="Services\ColonyNoteService\" />
     <Folder Include="Services\ColonyPollinationService\" />

@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiaryManagementSystem.Services.ApiaryServices
 {
-    public class ApiaryService : IApiaryService
+    public class BeeColonyService : IBeeColonyService
     {
         private readonly ApplicationDbContext _context;
-        public ApiaryService(ApplicationDbContext context)
+        public BeeColonyService(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public async Task Create(Apiary apiary)
+        public async Task Create(BeeColony apiary)
         {
             try
             {
@@ -25,18 +25,17 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
             }
         }
 
-        //Переделать
         public async Task Delete(int Id)
         {
             try
             {
-                var apiary = await _context.Apiaries.FindAsync(Id);
+                var apiary = await _context.BeeColonies.FindAsync(Id);
                 if (apiary == null)
                 {
                     throw new InvalidOperationException($"ID {Id} не найдено :(");
                 }
 
-                _context.Apiaries.Remove(apiary);
+                _context.BeeColonies.Remove(apiary);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -45,16 +44,16 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
             }
         }
 
-        public async Task<Apiary> GetById(int Id)
+        public async Task<BeeColony> GetById(int Id)
         {
             try
             {
-                var apiary = await _context.Apiaries.FindAsync(Id);
-                if (apiary == null)
+                var colony = await _context.BeeColonies.FindAsync(Id);
+                if (colony == null)
                 {
                     throw new InvalidOperationException($"ID {Id} не найдено :(");
                 }
-                return apiary;
+                return colony;
             }
             catch (Exception ex)
             {
@@ -62,28 +61,11 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
             }
         }
 
-        //public async Task<List<Apiary>> GetByOwnerId(int Id)
-        //{
-        //    try
-        //    {
-        //        var apiary = await _context.Apiaries.Where(x => x.OwnerId == Id).ToListAsync();
-        //        if (apiary == null)
-        //        {
-        //            throw new InvalidOperationException($"ID {Id} не найдено :(");
-        //        }
-        //        return apiary;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new InvalidOperationException("Произошла ошибка при получении :(", ex);
-        //    }
-        //}
-
-        public async Task<List<Apiary>> GetAll()
+        public async Task<List<BeeColony>> GetAll()
         {
             try
             {
-                return await _context.Apiaries.Include(a => a.Owner).ToListAsync();
+                return await _context.BeeColonies.Include(a => a.Apiary).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -91,17 +73,24 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
             }
         }
 
-        public async Task<(bool IsSuccess, string Message)> Update(Apiary apiary)
+        public async Task<BeeColony> Update(BeeColony beeColony)
         {
             try
             {
-                _context.Apiaries.Update(apiary);
+                var existingBeeColony = await _context.BeeColonies.FindAsync(beeColony.Id);
+                if (existingBeeColony == null)
+                {
+                    throw new InvalidOperationException($"ID {beeColony.Id} не найдено :(");
+                }
+
+                _context.Entry(existingBeeColony).CurrentValues.SetValues(beeColony);
                 await _context.SaveChangesAsync();
-                return (true, "Пасека успешно обновлена");
+
+                return existingBeeColony;
             }
             catch (Exception ex)
             {
-                return (false, $"Ошибка при обновлении: {ex.Message}");
+                throw new InvalidOperationException("Произошла ошибка при обновлении :(", ex);
             }
         }
 

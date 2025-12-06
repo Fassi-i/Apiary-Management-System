@@ -1,0 +1,103 @@
+﻿@model List<Apiary>
+
+@{
+    ViewData["Title"] = "Мои пасеки";
+    var apiaries = Model ?? new List<Apiary>();
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/apiary-cards.css">
+</head>
+<body>
+    <div class="myContainer">
+        <div class="header">
+            <h1>Мои пасеки</h1>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        @if (!apiaries.Any())
+        {
+            <div class="empty-state">
+                <h3 class="no-apiaries">У вас пока нет пасек</h3>
+            </div>
+        }
+        else
+        {
+            <div class="apiary-grid">
+                @foreach (var apiary in apiaries)
+                {
+                    <div class="apiary-card">
+                        <div class="apiary-header">
+                            <div class="apiary-name">
+                                <h3>@apiary.Name</h3>
+                                <span class="apiary-type @(apiary.IsMobile ? "mobile" : "stationary")">
+                                    @(apiary.IsMobile ? "Выездная" : "Стационарная")
+                                </span>
+                            </div>
+                            <div class="apiary-header-actions">
+                                <a asp-action="Edit" asp-route-id="@apiary.Id" class="btn-edit" title="Редактировать">
+                                    ✏️
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="apiary-info">
+                            <div class="info-item">
+                                <div class="info-content">
+                                    <span class="info-label">Локация</span>
+                                    <span class="info-value">
+                                        @if (!string.IsNullOrEmpty(apiary.Address))
+                                        {
+                                            @apiary.Address
+                                        }
+                                        else
+                                        {
+                                            <em>Не указана</em>
+                                        }
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-content">
+                                    <span class="info-label">Пчелосемей</span>
+                                    <span class="info-value">
+                                        @try
+                                        {
+                                            @ViewBag.ColoniesCount[apiary.Id]
+                                        }
+                                        catch
+                                        {
+                                            @:0
+                                        }
+                                        семей
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apiary-footer">
+                            <a asp-controller="BeeColony" asp-action="Index" asp-route-apiaryId="@apiary.Id"
+                               class="btn-families">
+                                Перейти к семьям
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</body>
+</html>

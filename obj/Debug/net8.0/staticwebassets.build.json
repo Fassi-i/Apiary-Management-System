@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eRO5Y8TC99S7AOHS8vu1lQm5tzR2sNdhG4LmBOY76Bs=",
+  "Hash": "rpJmh7XxrOAGA3KOuCjbwgFVihN3fyQYKZ8iEE7yBCk=",
   "Source": "ApiaryManagementSystem",
   "BasePath": "_content/ApiaryManagementSystem",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ApiaryManagementSystem.bundle.scp.css"
     },
     {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\apiary-cards.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/apiary-cards#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5h8kufvuzd",
+      "Integrity": "F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\apiary-cards.css"
+    },
+    {
       "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
       "SourceId": "ApiaryManagementSystem",
       "SourceType": "Discovered",
@@ -73,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8kmffic41j",
-      "Integrity": "+NaleXnyEukpJ7fOpkOGCNfhOAfmBdSwn+hgdYnxZMo=",
+      "Fingerprint": "2d6741n2do",
+      "Integrity": "9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\custom-date.css"
@@ -94,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k0wvenuuwg",
-      "Integrity": "LGKOH8WsEPnr6oQbuhRNnOcAI1yRXXH7TbynKKpE7U0=",
+      "Fingerprint": "3fokiw1t2t",
+      "Integrity": "n9pSmddQNylEiHinpN2emlE+P7z+KxdVVbeNGVCwJGA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\custom-multiple-select.css"
@@ -115,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hy2fss4baw",
-      "Integrity": "R7daYzKTle/VDvIrkztVrXq1n6fHqiI6YmlTm51qABc=",
+      "Fingerprint": "ccc3ld4v2m",
+      "Integrity": "POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\custom-select.css"
@@ -136,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wr3vzp1azt",
-      "Integrity": "JETaZMtYE3m4unMmLedNsLaq/wV2ehWoUwebT+83z4s=",
+      "Fingerprint": "lwoob37u23",
+      "Integrity": "66RBsGbskUulzrmA8hehZfmhyAq7Wj0DHABgeIZLouo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -157,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s34ttfjd55",
-      "Integrity": "+Pzj8lfdX9CpZLGmRi114RoK314+qdzwCnmyeaCPXl8=",
+      "Fingerprint": "wn5ej5j8i8",
+      "Integrity": "LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
@@ -1632,7 +1653,89 @@
       ]
     },
     {
-      "Route": "css/custom-date.8kmffic41j.css",
+      "Route": "css/apiary-cards.5h8kufvuzd.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\apiary-cards.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3448"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 06 Dec 2025 15:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5h8kufvuzd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/apiary-cards.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk="
+        }
+      ]
+    },
+    {
+      "Route": "css/apiary-cards.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\apiary-cards.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3448"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 06 Dec 2025 15:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-date.2d6741n2do.css",
       "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1650,11 +1753,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+NaleXnyEukpJ7fOpkOGCNfhOAfmBdSwn+hgdYnxZMo=\""
+          "Value": "\"9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:53:28 GMT"
+          "Value": "Sat, 06 Dec 2025 12:52:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1664,7 +1767,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8kmffic41j"
+          "Value": "2d6741n2do"
         },
         {
           "Name": "label",
@@ -1672,7 +1775,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+NaleXnyEukpJ7fOpkOGCNfhOAfmBdSwn+hgdYnxZMo="
+          "Value": "sha256-9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0="
         }
       ]
     },
@@ -1695,11 +1798,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+NaleXnyEukpJ7fOpkOGCNfhOAfmBdSwn+hgdYnxZMo=\""
+          "Value": "\"9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:53:28 GMT"
+          "Value": "Sat, 06 Dec 2025 12:52:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1709,7 +1812,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+NaleXnyEukpJ7fOpkOGCNfhOAfmBdSwn+hgdYnxZMo="
+          "Value": "sha256-9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom-multiple-select.3fokiw1t2t.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n9pSmddQNylEiHinpN2emlE+P7z+KxdVVbeNGVCwJGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 06 Dec 2025 12:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3fokiw1t2t"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom-multiple-select.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n9pSmddQNylEiHinpN2emlE+P7z+KxdVVbeNGVCwJGA="
         }
       ]
     },
@@ -1724,7 +1872,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2955"
+          "Value": "4157"
         },
         {
           "Name": "Content-Type",
@@ -1732,11 +1880,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LGKOH8WsEPnr6oQbuhRNnOcAI1yRXXH7TbynKKpE7U0=\""
+          "Value": "\"n9pSmddQNylEiHinpN2emlE+P7z+KxdVVbeNGVCwJGA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:53:54 GMT"
+          "Value": "Sat, 06 Dec 2025 12:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1746,13 +1894,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LGKOH8WsEPnr6oQbuhRNnOcAI1yRXXH7TbynKKpE7U0="
+          "Value": "sha256-n9pSmddQNylEiHinpN2emlE+P7z+KxdVVbeNGVCwJGA="
         }
       ]
     },
     {
-      "Route": "css/custom-multiple-select.k0wvenuuwg.css",
-      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-multiple-select.css",
+      "Route": "css/custom-select.ccc3ld4v2m.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1761,7 +1909,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2955"
+          "Value": "3276"
         },
         {
           "Name": "Content-Type",
@@ -1769,11 +1917,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LGKOH8WsEPnr6oQbuhRNnOcAI1yRXXH7TbynKKpE7U0=\""
+          "Value": "\"POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:53:54 GMT"
+          "Value": "Sat, 06 Dec 2025 12:55:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1783,15 +1931,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k0wvenuuwg"
+          "Value": "ccc3ld4v2m"
         },
         {
           "Name": "label",
-          "Value": "css/custom-multiple-select.css"
+          "Value": "css/custom-select.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LGKOH8WsEPnr6oQbuhRNnOcAI1yRXXH7TbynKKpE7U0="
+          "Value": "sha256-POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI="
         }
       ]
     },
@@ -1806,7 +1954,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3671"
+          "Value": "3276"
         },
         {
           "Name": "Content-Type",
@@ -1814,11 +1962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"R7daYzKTle/VDvIrkztVrXq1n6fHqiI6YmlTm51qABc=\""
+          "Value": "\"POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:54:35 GMT"
+          "Value": "Sat, 06 Dec 2025 12:55:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1828,52 +1976,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-R7daYzKTle/VDvIrkztVrXq1n6fHqiI6YmlTm51qABc="
-        }
-      ]
-    },
-    {
-      "Route": "css/custom-select.hy2fss4baw.css",
-      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-select.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3671"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"R7daYzKTle/VDvIrkztVrXq1n6fHqiI6YmlTm51qABc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:54:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hy2fss4baw"
-        },
-        {
-          "Name": "label",
-          "Value": "css/custom-select.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-R7daYzKTle/VDvIrkztVrXq1n6fHqiI6YmlTm51qABc="
+          "Value": "sha256-POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI="
         }
       ]
     },
@@ -1888,7 +1991,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "479"
+          "Value": "422"
         },
         {
           "Name": "Content-Type",
@@ -1896,11 +1999,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JETaZMtYE3m4unMmLedNsLaq/wV2ehWoUwebT+83z4s=\""
+          "Value": "\"66RBsGbskUulzrmA8hehZfmhyAq7Wj0DHABgeIZLouo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Nov 2025 16:41:30 GMT"
+          "Value": "Sat, 06 Dec 2025 14:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1910,12 +2013,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JETaZMtYE3m4unMmLedNsLaq/wV2ehWoUwebT+83z4s="
+          "Value": "sha256-66RBsGbskUulzrmA8hehZfmhyAq7Wj0DHABgeIZLouo="
         }
       ]
     },
     {
-      "Route": "css/site.wr3vzp1azt.css",
+      "Route": "css/site.lwoob37u23.css",
       "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1925,7 +2028,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "479"
+          "Value": "422"
         },
         {
           "Name": "Content-Type",
@@ -1933,11 +2036,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JETaZMtYE3m4unMmLedNsLaq/wV2ehWoUwebT+83z4s=\""
+          "Value": "\"66RBsGbskUulzrmA8hehZfmhyAq7Wj0DHABgeIZLouo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Nov 2025 16:41:30 GMT"
+          "Value": "Sat, 06 Dec 2025 14:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1947,7 +2050,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wr3vzp1azt"
+          "Value": "lwoob37u23"
         },
         {
           "Name": "label",
@@ -1955,7 +2058,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JETaZMtYE3m4unMmLedNsLaq/wV2ehWoUwebT+83z4s="
+          "Value": "sha256-66RBsGbskUulzrmA8hehZfmhyAq7Wj0DHABgeIZLouo="
         }
       ]
     },
@@ -1970,7 +2073,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5213"
+          "Value": "5234"
         },
         {
           "Name": "Content-Type",
@@ -1978,11 +2081,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Pzj8lfdX9CpZLGmRi114RoK314+qdzwCnmyeaCPXl8=\""
+          "Value": "\"LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Nov 2025 16:33:23 GMT"
+          "Value": "Sat, 06 Dec 2025 13:55:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1992,12 +2095,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+Pzj8lfdX9CpZLGmRi114RoK314+qdzwCnmyeaCPXl8="
+          "Value": "sha256-LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY="
         }
       ]
     },
     {
-      "Route": "css/style.s34ttfjd55.css",
+      "Route": "css/style.wn5ej5j8i8.css",
       "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2007,7 +2110,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5213"
+          "Value": "5234"
         },
         {
           "Name": "Content-Type",
@@ -2015,11 +2118,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Pzj8lfdX9CpZLGmRi114RoK314+qdzwCnmyeaCPXl8=\""
+          "Value": "\"LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Nov 2025 16:33:23 GMT"
+          "Value": "Sat, 06 Dec 2025 13:55:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2029,7 +2132,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "s34ttfjd55"
+          "Value": "wn5ej5j8i8"
         },
         {
           "Name": "label",
@@ -2037,7 +2140,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+Pzj8lfdX9CpZLGmRi114RoK314+qdzwCnmyeaCPXl8="
+          "Value": "sha256-LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY="
         }
       ]
     },
@@ -2310,7 +2413,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:56:32 GMT"
+          "Value": "Sat, 06 Dec 2025 13:22:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2347,7 +2450,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 20:56:32 GMT"
+          "Value": "Sat, 06 Dec 2025 13:22:20 GMT"
         },
         {
           "Name": "Cache-Control",

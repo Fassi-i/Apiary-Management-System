@@ -1,4 +1,5 @@
-﻿using ApiaryManagementSystem.Context;
+﻿using System.Security.Claims;
+using ApiaryManagementSystem.Context;
 using ApiaryManagementSystem.Models;
 using ApiaryManagementSystem.Services.ApiaryServices;
 using ApiaryManagementSystem.Services.UserService;
@@ -13,12 +14,43 @@ namespace ApiaryManagementSystem.Controllers
     public class ApiaryController : Controller
     {
         private readonly IApiaryService _service;
+        private readonly IBeeColonyService _beeColonyService;
         private readonly ApplicationDbContext _context;
 
-        public ApiaryController(IApiaryService service, ApplicationDbContext context)
+        public ApiaryController(IApiaryService service, IBeeColonyService beeColonyService,  ApplicationDbContext context)
         {
             _service = service;
+            _beeColonyService = beeColonyService;
             _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            
+            var userId = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var apiaries = await _context.Apiaries
+                .Include(a => a.Owner)
+                .Where(a => a.OwnerId == userId)
+                .ToListAsync();
+
+            var beeColoniesCount = _context.BeeColonies
+                .GroupBy(b => b.ApiaryId)
+                .ToDictionary(
+                    group => group.Key,
+                    group =>
+                    {
+                        return group.Count();
+                    }
+                );
+            ViewBag.ColoniesCount = beeColoniesCount;
+            //Кароч, тут оно записывает только те пасеки, у которых есть ульи
+            //Если у пасеки нет ульев -> ошибка получения элемента по ключу из словаря в html
+            //Надо как-то у
+
+            if (apiaries == null) return View(new List<Apiary>());
+            return View(apiaries);
         }
 
         [HttpGet]
@@ -39,7 +71,7 @@ namespace ApiaryManagementSystem.Controllers
                 try
                 {
                     await _service.Create(apiary);
-                    return RedirectToAction("Create", "Apiary");
+                    return RedirectToAction("Index", "Apiary");
                 }
                 catch
                 {
@@ -50,26 +82,44 @@ namespace ApiaryManagementSystem.Controllers
             }
 
             await LoadUsers();
-            return View(apiary);
+            return RedirectToAction("Create", "Apiary");
         }
 
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
         {
-            var users = await _service.GetAll();
-            return View(users);
+            await LoadUsers();
+            var user = await _service.GetById(id);
+            return user == null ? View("NotFound") : View(user);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Apiary user)
+        {
+            if (id != user.Id) return View("NotFound");
+
+            if (!ModelState.IsValid)
+            {
+                return View(user);
+            }
+
+            await _service.Update(user);
+            return RedirectToAction("Index", "Apiary");
+        }
+
 
         private async Task LoadUsers()
         {
             var users = await _context.Users
-                .Select(u => new
+                .Include(u => u.Position) 
+                .Select(u => new SelectListItem
                 {
-                    u.Id,
-                    FullName = $"{u.LastName} {u.FirstName} {u.MiddleName}"
+                    Value = u.Id.ToString(),
+                    Text = $"{u.LastName} {u.FirstName} {u.MiddleName} - {u.Position.PositionName}"
                 })
                 .ToListAsync();
 
-            ViewBag.Users = new SelectList(users, "Id", "FullName");
+            ViewBag.Users = users;
         }
     }
 }

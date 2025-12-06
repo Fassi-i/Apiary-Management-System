@@ -43,7 +43,7 @@ namespace ApiaryManagementSystem.Controllers
 
                 await HttpContext.SignInAsync(principal);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Apiary");
             }
 
             ModelState.AddModelError("", "Неверный логин или пароль");

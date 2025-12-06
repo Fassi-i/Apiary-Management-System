@@ -11,8 +11,7 @@
 <div class="container">
     <div class="myContainer">
         <div class="header">
-            <h1>Добавление пчелосемьи</h1>
-            <p>Заполните следующую информацию</p>
+            <h1>Изменение пасеки</h1>
         </div>
 
         @if (TempData["SuccessMessage"] != null)
@@ -22,7 +21,7 @@
             </div>
         }
 
-        <form asp-action="Create" method="post" id="beekeeperForm">
+        <form asp-action="Edit" method="post" id="beekeeperForm">
             @Html.AntiForgeryToken()
 
             <div class="form-row">
@@ -39,12 +38,6 @@
                     <select asp-for="OwnerId" asp-items="ViewBag.Users" class="select-input" id="ownerSelect"></select>
                 </div>
             </div>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('ownerSelect').selectedIndex = -1;
-                });
-            </script>
 
             <div class="form-group">
                 <label class="checkbox-group">
@@ -64,11 +57,13 @@
             </div>
 
             <button type="submit" class="btn-submit">
-                Добавить
+                Сохранить
             </button>
+
+            <input type="hidden" asp-for="Id" class="form-control" />
+            <input type="hidden" asp-for="ApiaryStatusId" class="form-control" />
         </form>
     </div>
 </div>
-</style>
 <script src="~/js/custom-select.js"></script>
 <partial name="_ValidationScriptsPartial" />

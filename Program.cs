@@ -23,11 +23,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
+
 builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Apiary>, ApiaryValidator>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IApiaryService, ApiaryService>();
+builder.Services.AddScoped<IBeeColonyService, BeeColonyService>();
 
 builder.Services.AddAuthorization(options =>
 {
@@ -66,6 +68,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Apiary}/{action=Index}/{id?}");
 
 app.Run();

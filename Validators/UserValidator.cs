@@ -22,6 +22,12 @@ namespace ApiaryManagementSystem.Validators
                 .Matches(@"^[a-zA-Zа-яА-ЯёЁ\s\-]*$").WithMessage("Отчество содержит недопустимые символы")
                 .When(x => !string.IsNullOrEmpty(x.MiddleName));
 
+            RuleFor(x => x.Password)
+                .NotEmpty().WithMessage("Пароль обязателен для заполнения")
+                .MinimumLength(5).WithMessage("Пароль должен содержать минимум 5 символов")
+                .MaximumLength(30).WithMessage("Пароль не должен быть длиннее 30 символов")
+                .Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).+$").WithMessage("Пароль должен содержать хотя бы одну строчную букву, заглавнаю, цифру и символ из следующего набора @$!%*?& ");
+
             RuleFor(x => x.BirthDate)
                 .Must(date => date != default(DateOnly)).WithMessage("Введите корректную дату в формате дд.мм.гггг")
                 .Must(date => date < DateOnly.FromDateTime(DateTime.Now.AddYears(-14)))

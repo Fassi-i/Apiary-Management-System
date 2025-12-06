@@ -1,0 +1,173 @@
+﻿/* Сетка карточек пасек */
+.apiary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Карточка пасеки */
+.apiary-card {
+    background: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+    .apiary-card:hover {
+        border-color: #FFC107;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+/* Шапка карточки */
+.apiary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.apiary-name {
+    flex: 1;
+}
+
+    .apiary-name h3 {
+        margin: 0 0 8px 0;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+.apiary-type {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+    .apiary-type.mobile {
+        background: #FFF3E0;
+        color: #FF9800;
+        border: 1px solid #FFE0B2;
+    }
+
+    .apiary-type.stationary {
+        background: #E8F5E9;
+        color: #4CAF50;
+        border: 1px solid #C8E6C9;
+    }
+
+/* Кнопки действий в шапке */
+.apiary-header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    background: #FFC107;
+    color: #333;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    .btn-edit:hover {
+        background: #FFB300;
+        transform: scale(1.05);
+    }
+
+/* Информация в карточке */
+.apiary-info {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+    .info-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+.info-icon {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+    color: #666;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.info-value {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+/* Кнопка внизу карточки */
+.apiary-footer {
+    margin-top: auto;
+}
+
+.btn-families {
+    width: 100%;
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+    .btn-families:hover {
+        background: linear-gradient(135deg, #FF9800, #F57C00);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        color: white;
+        text-decoration: none;
+    }
+
+/* Отсутствие карточек */
+
+.no-apiaries{
+    text-align: center;
+    color: #b9b9b9;
+}

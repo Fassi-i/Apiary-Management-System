@@ -1,12 +1,14 @@
-﻿.custom-select {
+﻿/* Стили для одиночного выбора */
+.custom-select {
     position: relative;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 .select-trigger {
     width: 100%;
     padding: 12px 40px 12px 12px;
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
     background-color: white;
@@ -14,7 +16,12 @@
     cursor: pointer;
     text-align: left;
     transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
     position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
     .select-trigger::after {
@@ -50,7 +57,7 @@
     left: 0;
     right: 0;
     background: white;
-    border: 2px solid #FFC107;
+    border: 1px solid #ddd;
     border-top: none;
     border-radius: 0 0 6px 6px;
     max-height: 200px;
@@ -95,34 +102,7 @@
     display: none;
 }
 
-/* Крестик */
-.select-trigger {
-    width: 100%;
-    padding: 12px 60px 12px 12px; 
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    background-color: white;
-    color: #333;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-    .select-trigger::after {
-        content: "▼";
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 12px;
-        color: #666;
-        transition: all 0.3s ease;
-        z-index: 2;
-    }
-
+/* Крестик для очистки */
 .select-clear {
     position: absolute;
     right: 30px;
@@ -140,35 +120,20 @@
     justify-content: center;
     border-radius: 50%;
     transition: all 0.2s ease;
-    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
 }
-
-    .select-clear:hover {
-        background: #f5f5f5;
-        color: #f44336;
-    }
 
 .select-trigger.has-value .select-clear {
     opacity: 1;
     pointer-events: all;
 }
 
-.select-trigger:not(.has-value) .select-clear {
-    opacity: 0;
-    pointer-events: none;
+.select-clear:hover {
+    background: #f5f5f5;
+    color: #f44336;
 }
 
-.select-trigger.active::after {
-    transform: translateY(-50%) rotate(180deg);
-    color: #FF9800;
-}
-
-.select-trigger {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 60px; 
-}
 /* Плейсхолдер */
 .select-trigger-text.placeholder {
     color: #999;
@@ -176,4 +141,19 @@
 
 .select-trigger:not(.has-value) .select-trigger-text {
     color: #999;
+}
+
+@media (max-width: 768px) {
+    .select-trigger {
+        font-size: 14px;
+        padding: 10px 35px 10px 10px;
+    }
+
+        .select-trigger::after {
+            right: 10px;
+        }
+
+    .select-clear {
+        right: 25px;
+    }
 }

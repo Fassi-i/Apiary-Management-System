@@ -1,0 +1,38 @@
+﻿@model BeeColony
+
+@{
+    ViewData["Title"] = "Добавление пчелосемьи";
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/custom-select.css">
+
+<div class="container">
+    <div class="myContainer">
+        <div class="header">
+            <h1>Добавление пчелосемьи</h1>
+            <p>Заполните следующую информацию</p>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <form asp-action="Create" method="post" id="beekeeperForm">
+            @Html.AntiForgeryToken()
+
+            
+
+            <button type="submit" class="btn-submit">
+                Добавить
+            </button>
+        </form>
+    </div>
+</div>
+</style>
+<script src="~/js/custom-select.js"></script>
+<partial name="_ValidationScriptsPartial" />
