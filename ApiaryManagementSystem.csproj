@@ -21,23 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Middlewares\" />
-    <Folder Include="Services\ApiaryStatusService\" />
-    <Folder Include="Services\ColonyDiseaseService\" />
-    <Folder Include="Services\ColonyNoteService\" />
-    <Folder Include="Services\ColonyPollinationService\" />
-    <Folder Include="Services\ColonyProductService\" />
-    <Folder Include="Services\ColonySwarmingService\" />
-    <Folder Include="Services\ColonyWinteringService\" />
-    <Folder Include="Services\CropServiceService\" />
-    <Folder Include="Services\DiseaseService\" />
-    <Folder Include="Services\InspectionService\" />
-    <Folder Include="Services\PollinationLocationService\" />
-    <Folder Include="Services\PositionService\" />
-    <Folder Include="Services\ProductService\" />
-    <Folder Include="Services\QueenService\" />
-    <Folder Include="Services\TherapyService\" />
-    <Folder Include="Services\TherapyTypeService\" />
-    <Folder Include="Services\UnitService\" />
   </ItemGroup>
 
 </Project>

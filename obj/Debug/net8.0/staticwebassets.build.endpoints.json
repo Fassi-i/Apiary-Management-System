@@ -167,6 +167,88 @@
       ]
     },
     {
+      "Route": "css/bee-colony.b01z722y9a.css",
+      "AssetFile": "css/bee-colony.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b01z722y9a"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
+        },
+        {
+          "Name": "label",
+          "Value": "css/bee-colony.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/bee-colony.css",
+      "AssetFile": "css/bee-colony.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
+        }
+      ]
+    },
+    {
       "Route": "css/custom-date.2d6741n2do.css",
       "AssetFile": "css/custom-date.css",
       "Selectors": [],

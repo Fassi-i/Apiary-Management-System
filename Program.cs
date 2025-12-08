@@ -7,6 +7,7 @@ using ApiaryManagementSystem.Validators;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using ApiaryManagementSystem.Services.ApiaryServices;
+using ApiaryManagementSystem.Services.InspectionService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ builder.Services.AddScoped<IValidator<Apiary>, ApiaryValidator>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IApiaryService, ApiaryService>();
 builder.Services.AddScoped<IBeeColonyService, BeeColonyService>();
+builder.Services.AddScoped<IInspectionService, InspectionService>();
 
 builder.Services.AddAuthorization(options =>
 {

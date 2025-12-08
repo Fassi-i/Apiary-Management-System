@@ -1,6 +1,7 @@
-﻿@* Views/Account/Login.cshtml *@
+﻿@model List<User>
 @{
     ViewData["Title"] = "Вход в систему";
+    var users = ViewBag.Users as List<User> ?? new List<User>();
 }
 
 <h2>Вход в систему</h2>
@@ -24,4 +25,36 @@
     <div class="alert alert-danger mt-3">
         @Html.ValidationSummary()
     </div>
+}
+
+<br />
+<hr />
+<br />
+
+@if (users.Any())
+{
+    <h4>Все пользователи:</h4>
+
+    <form method="post" id="quickLoginForm">
+        <input type="hidden" name="login" id="quickLoginInput" />
+        <input type="hidden" name="password" id="quickPasswordInput" />
+
+        @foreach (var user in users)
+        {
+            <button type="button"onclick="quickLogin('@user.Login', '@user.Password')" style="width: 100%; text-align: left;">
+                @user.LastName @user.FirstName @user.MiddleName <br />
+                <small>Логин: @user.Login</small>
+            </button>
+            <br />
+            <br />
+        }
+    </form>
+
+    <script>
+        function quickLogin(login, password) {
+            document.getElementById('quickLoginInput').value = login;
+            document.getElementById('quickPasswordInput').value = password;
+            document.getElementById('quickLoginForm').submit();
+        }
+    </script>
 }

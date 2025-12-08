@@ -17,11 +17,14 @@ namespace ApiaryManagementSystem.Controllers
 
         // GET метод для отображения формы
         [HttpGet]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
+            // Получаем всех пользователей для кнопок быстрого входа
+            var users = await _context.Users.ToListAsync();
+            ViewBag.Users = users;
+
             return View();
         }
-
         // POST метод для обработки формы
         [HttpPost]
         public async Task<IActionResult> Login(string login, string password)

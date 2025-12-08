@@ -45,9 +45,6 @@ namespace ApiaryManagementSystem.Controllers
                     }
                 );
             ViewBag.ColoniesCount = beeColoniesCount;
-            //Кароч, тут оно записывает только те пасеки, у которых есть ульи
-            //Если у пасеки нет ульев -> ошибка получения элемента по ключу из словаря в html
-            //Надо как-то у
 
             if (apiaries == null) return View(new List<Apiary>());
             return View(apiaries);

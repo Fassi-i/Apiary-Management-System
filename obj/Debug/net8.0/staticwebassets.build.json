@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rpJmh7XxrOAGA3KOuCjbwgFVihN3fyQYKZ8iEE7yBCk=",
+  "Hash": "j6SHABuT07OCsFzKha+B7gnB3l6cMH9ckSZ8lSuYNOk=",
   "Source": "ApiaryManagementSystem",
   "BasePath": "_content/ApiaryManagementSystem",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\apiary-cards.css"
+    },
+    {
+      "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\bee-colony.css",
+      "SourceId": "ApiaryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\",
+      "BasePath": "_content/ApiaryManagementSystem",
+      "RelativePath": "css/bee-colony#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b01z722y9a",
+      "Integrity": "JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bee-colony.css"
     },
     {
       "Identity": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\custom-date.css",
@@ -1731,6 +1752,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk="
+        }
+      ]
+    },
+    {
+      "Route": "css/bee-colony.b01z722y9a.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\bee-colony.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b01z722y9a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bee-colony.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
+        }
+      ]
+    },
+    {
+      "Route": "css/bee-colony.css",
+      "AssetFile": "D:\\is\\Рабочий стол 2\\Колледж\\DIPLOMA\\Apiary-Management-System\\wwwroot\\css\\bee-colony.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
         }
       ]
     },

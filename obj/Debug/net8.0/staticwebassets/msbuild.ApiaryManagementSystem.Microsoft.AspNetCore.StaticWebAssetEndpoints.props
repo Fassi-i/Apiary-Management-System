@@ -24,6 +24,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3448"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 06 Dec 2025 15:00:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ApiaryManagementSystem/css/bee-colony.b01z722y9a.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bee-colony.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"b01z722y9a"},{"Name":"integrity","Value":"sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="},{"Name":"label","Value":"_content/ApiaryManagementSystem/css/bee-colony.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4548"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 08 Dec 2025 18:20:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ApiaryManagementSystem/css/bee-colony.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bee-colony.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4548"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 08 Dec 2025 18:20:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ApiaryManagementSystem/css/custom-date.2d6741n2do.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\custom-date.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
