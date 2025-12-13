@@ -1,0 +1,40 @@
+﻿@model List<Inspection>
+@{
+    var inpections = Model ?? new List<Inspection>();
+}
+
+<h1>Семья @ViewBag.ApiaryNumber</h1>
+<a asp-controller="BeeColony" asp-action="Details" asp-route-id="@ViewBag.ApiaryId">← Назад к семье</a>
+<br>
+<br>
+
+@if (inpections != null && inpections.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Дата и время</th>
+                <th>Сила семьи (рамок)</th>
+                <th>Расплод (рамок)</th>
+                <th>Корм (кг)</th>
+                <th>Примечания</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inspection in inpections)
+            {
+                <tr>
+                    <td>@inspection.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@inspection.StrengthInFrames</td>
+                    <td>@inspection.BroodFrames</td>
+                    <td>@inspection.FoodAmountKg</td>
+                    <td>@(inspection.Notes?.Length > 50 ? inspection.Notes.Substring(0, 50) + "..." : inspection.Notes)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Осмотры не проводились</p>
+}

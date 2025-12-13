@@ -10,22 +10,17 @@
 <h3>@(isDisbanded ? "Завершена" : "Активна")</h3>
 
 <br>
-<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
-    Редактировать
-</a>
-<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">
-    Новый осмотр
-</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"> Редактировать </a>
+<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success"> Новый осмотр </a>
 
-@if (!isDisbanded)
-{
-    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">
-        Расформировать семью
-    </a>
+@if (!isDisbanded) 
+{ 
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"> Расформировать семью </a> 
 }
 
 <br>
 <br>
+
 <table class="table table-hover">
     <tr>
         <th>Номер семьи</th>
@@ -84,11 +79,10 @@
 </table>
 
 
-
-
-
 <br>
 <br>
+
+
 <h3>Матка</h3>
 @if (ViewBag.Queen != null)
 {
@@ -122,8 +116,12 @@ else
     <p>Матка не указана</p>
 }
 
+
 <br>
 <br>
+<br>
+
+
 <h3>История осмотров</h3>
 
 @if (ViewBag.Inspections != null && ((List<Inspection>)ViewBag.Inspections).Any())
@@ -136,22 +134,37 @@ else
                 <th>Расплод</th>
                 <th>Корм</th>
                 <th>Примечания</th>
-                <th>Действия</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var inspection in (List<Inspection>)ViewBag.Inspections)
-            {
-                <tr>
-                    <td>@inspection.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
-                    <td>@inspection.StrengthInFrames рам.</td>
-                    <td>@inspection.BroodFrames рам.</td>
-                    <td>@inspection.FoodAmountKg кг</td>
-                    <td>@(inspection.Notes?.Length > 50 ? inspection.Notes.Substring(0, 50) + "..." : inspection.Notes)</td>
-                    <td>
-                        <a asp-controller="Inspection" asp-action="Details" asp-route-id="@inspection.Id">Просмотр</a>
-                    </td>
-                </tr>
+            @{
+                int count = 0;
+                foreach (var inspection in (List<Inspection>)ViewBag.Inspections)
+                {
+                    if (count == 5)
+                    {
+                        <tr>
+                            <td colspan="10">
+                                <a asp-controller="Inspection" asp-action="Details" asp-route-id="@Model.Id">
+                                    Показать все осмотры
+                                </a>
+                            </td>
+                        </tr>
+                        break;
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@inspection.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
+                            <td>@inspection.StrengthInFrames рам.</td>
+                            <td>@inspection.BroodFrames рам.</td>
+                            <td>@inspection.FoodAmountKg кг</td>
+                            <td>@(inspection.Notes?.Length > 50 ? inspection.Notes.Substring(0, 50) + "..." : inspection.Notes)</td>
+                        </tr>
+                        count++;
+                    }
+
+                }
             }
         </tbody>
     </table>
@@ -160,20 +173,14 @@ else
 {
     <p>Осмотры не проводились</p>
 }
-@if (ViewBag.LastInspection != null)
-{
-    <a asp-controller="Inspection"
-       asp-action="Index"
-       asp-route-id="@Model.Id"
-       class="btn btn-warning">
-        Все осмотры
-    </a>
-}
 <a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Новый осмотр</a>
 
 
 <br>
 <br>
+<br>
+
+
 <h3>Заболевания и лечение</h3>
 
 @if (ViewBag.Diseases != null && ((List<ColonyDisease>)ViewBag.Diseases).Any())
@@ -238,7 +245,11 @@ else
     <p>Заболевания не зафиксированы</p>
 }
 
+
 <br>
+<br>
+
+
 <h3>Собранная продукция</h3>
 
 @if (ViewBag.Products != null && ((List<ColonyProduct>)ViewBag.Products).Any())
@@ -270,7 +281,11 @@ else
     <p>Продукция не собиралась</p>
 }
 
+
 <br>
+<br>
+
+
 <h3>История зимовок</h3>
 @if (ViewBag.Winterings != null && ((List<ColonyWintering>)ViewBag.Winterings).Any())
 {
@@ -285,7 +300,11 @@ else
     <p>Данные о зимовках отсутствуют</p>
 }
 
+
 <br>
+<br>
+
+
 <h3>Заметки</h3>
 
 @if (ViewBag.Notes != null && ((List<ColonyNote>)ViewBag.Notes).Any())
@@ -306,12 +325,16 @@ else
 
 @if (ViewBag.Pollinations != null && ((List<ColonyPollination>)ViewBag.Pollinations).Any())
 {
+
+    <br>
     <br>
     <h3>Опыление</h3>
 }
 
 @if (ViewBag.Swarmings != null && ((List<ColonySwarming>)ViewBag.Swarmings).Any())
 {
+
+    <br>
     <br>
     <h3>Роение</h3>
 }

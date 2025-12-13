@@ -21,3 +21,11 @@ html {
     height: 100px;
     background-color: rgb(250, 184, 56)
 }*/
+
+.myContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}

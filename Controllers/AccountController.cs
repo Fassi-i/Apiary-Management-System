@@ -19,7 +19,6 @@ namespace ApiaryManagementSystem.Controllers
         [HttpGet]
         public async Task<IActionResult> Login()
         {
-            // Получаем всех пользователей для кнопок быстрого входа
             var users = await _context.Users.ToListAsync();
             ViewBag.Users = users;
 

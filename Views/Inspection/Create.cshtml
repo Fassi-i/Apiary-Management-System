@@ -6,7 +6,7 @@
     // ViewData["Title"] = $"Семья {Model.Number}";
     // var isDisbanded = Model.DisbandmentDate != null;
 }
-<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/site.css">
 
 <div class="container">
     <div class="myContainer">
@@ -18,16 +18,8 @@
 
             <a asp-controller="BeeColony" asp-action="Details" asp-route-id="@inspVM.BeeColony?.Id">← Назад к списку семей</a>
 
-            <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
-            <input asp-for="BeeColony.Number" class="form-control" />
-            <span asp-validation-for="BeeColony.Number" class="text-danger"></span>
-
-            <label asp-for="BeeColony.CreationDate" class="control-label">Дата создания семьи</label>
-            <input asp-for="BeeColony.CreationDate" class="form-control" readonly />
-
-            <label asp-for="Inspection.StrengthInFrames" class="control-label">Сила семьи</label>
-            <input asp-for="Inspection.StrengthInFrames" type="number" class="form-control" />
-            <span asp-validation-for="Inspection.StrengthInFrames" class="text-danger"></span>
+            <br>
+            <h3>Основное</h3>
 
             <label asp-for="Inspection.TotalFrames" class="control-label">Всего рамок</label>
             <input asp-for="Inspection.TotalFrames" type="number" class="form-control" />
@@ -41,18 +33,40 @@
             <input asp-for="Inspection.FoodAmountKg" type="number" class="form-control" />
             <span asp-validation-for="Inspection.FoodAmountKg" class="text-danger"></span>
 
-
-
             <label asp-for="Inspection.Notes" class="control-label">Заметка</label>
             <textarea asp-for="Inspection.Notes" class="form-control"></textarea>
             <span asp-validation-for="Inspection.Notes" class="text-danger"></span>
 
+            <label asp-for="Inspection.DateTime" class="control-label">Дата</label>
+            <input asp-for="Inspection.DateTime" type="date" class="form-control" />
+            <span asp-validation-for="Inspection.DateTime" class="text-danger"></span>
+
+
+            <br>
+            <h3>Параметры семьи</h3>
+
+            <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
+            <input asp-for="BeeColony.Number" class="form-control" />
+            <span asp-validation-for="BeeColony.Number" class="text-danger"></span>
+
+            <label asp-for="BeeColony.CreationDate" class="control-label">Дата создания семьи</label>
+            <input asp-for="BeeColony.CreationDate" type="date" class="form-control" readonly />
+
+            <br>
+            <h3>Изменения</h3>
+
             <label asp-for="QueenId" class="control-label">Поменять матку</label>
             <select asp-for="QueenId" asp-items="@inspVM.Queens" class="form-control" id="ownerSelect"></select>
 
-            <button type="submit" class="btn btn-submit">
-                Добавить
-            </button>
+            <label asp-for="ApiatyId" class="control-label">Поменять пасеку</label>
+            <select asp-for="ApiatyId" asp-items="@inspVM.Apearies" class="form-control" id="ownerSelect"></select>
+            <br>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">
+                    Добавить
+                </button>
+            </div>
 
         </form>
     </div>
