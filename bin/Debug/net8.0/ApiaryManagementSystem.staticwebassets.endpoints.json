@@ -167,8 +167,8 @@
       ]
     },
     {
-      "Route": "css/bee-colony.b01z722y9a.css",
-      "AssetFile": "css/bee-colony.css",
+      "Route": "css/bee-colony-details.b5j485ul94.css",
+      "AssetFile": "css/bee-colony-details.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -181,7 +181,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4548"
+          "Value": "4702"
         },
         {
           "Name": "Content-Type",
@@ -189,25 +189,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+          "Value": "\"75U97ZWrkIM+7JyDJubeYowb40P3dQymul+bEt11MxM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+          "Value": "Fri, 12 Dec 2025 14:35:07 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b01z722y9a"
+          "Value": "b5j485ul94"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
+          "Value": "sha256-75U97ZWrkIM+7JyDJubeYowb40P3dQymul+bEt11MxM="
         },
         {
           "Name": "label",
-          "Value": "css/bee-colony.css"
+          "Value": "css/bee-colony-details.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/bee-colony-details.css",
+      "AssetFile": "css/bee-colony-details.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"75U97ZWrkIM+7JyDJubeYowb40P3dQymul+bEt11MxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Dec 2025 14:35:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-75U97ZWrkIM+7JyDJubeYowb40P3dQymul+bEt11MxM="
         }
       ]
     },
@@ -226,7 +263,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4548"
+          "Value": "1431"
         },
         {
           "Name": "Content-Type",
@@ -234,17 +271,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=\""
+          "Value": "\"F6RLf+Q8E6TYO2vkSkKlNfmL1zSdpCYnCciPFIyCmtw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 18:20:06 GMT"
+          "Value": "Fri, 12 Dec 2025 10:46:45 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw="
+          "Value": "sha256-F6RLf+Q8E6TYO2vkSkKlNfmL1zSdpCYnCciPFIyCmtw="
+        }
+      ]
+    },
+    {
+      "Route": "css/bee-colony.tntrl60yiw.css",
+      "AssetFile": "css/bee-colony.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F6RLf+Q8E6TYO2vkSkKlNfmL1zSdpCYnCciPFIyCmtw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Dec 2025 10:46:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tntrl60yiw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F6RLf+Q8E6TYO2vkSkKlNfmL1zSdpCYnCciPFIyCmtw="
+        },
+        {
+          "Name": "label",
+          "Value": "css/bee-colony.css"
         }
       ]
     },
@@ -591,7 +673,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5234"
+          "Value": "5372"
         },
         {
           "Name": "Content-Type",
@@ -599,22 +681,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=\""
+          "Value": "\"BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 06 Dec 2025 13:55:11 GMT"
+          "Value": "Sat, 13 Dec 2025 12:29:33 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY="
+          "Value": "sha256-BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo="
         }
       ]
     },
     {
-      "Route": "css/style.wn5ej5j8i8.css",
+      "Route": "css/style.gdaqdanwzx.css",
       "AssetFile": "css/style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -628,7 +710,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5234"
+          "Value": "5372"
         },
         {
           "Name": "Content-Type",
@@ -636,21 +718,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=\""
+          "Value": "\"BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 06 Dec 2025 13:55:11 GMT"
+          "Value": "Sat, 13 Dec 2025 12:29:33 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wn5ej5j8i8"
+          "Value": "gdaqdanwzx"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY="
+          "Value": "sha256-BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo="
         },
         {
           "Name": "label",

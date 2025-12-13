@@ -1,0 +1,317 @@
+﻿@model BeeColony
+@{
+    ViewData["Title"] = $"Семья {Model.Number}";
+    var isDisbanded = Model.DisbandmentDate != null;
+}
+
+<a asp-controller="BeeColony" asp-action="Index" asp-route-apiaryId="@Model.ApiaryId">← Назад к списку семей</a>
+
+<h1>Семья @Model.Number</h1>
+<h3>@(isDisbanded ? "Завершена" : "Активна")</h3>
+
+<br>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+    Редактировать
+</a>
+<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">
+    Новый осмотр
+</a>
+
+@if (!isDisbanded)
+{
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">
+        Расформировать семью
+    </a>
+}
+
+<br>
+<br>
+<table class="table table-hover">
+    <tr>
+        <th>Номер семьи</th>
+        <td>@Model.Number</td>
+    </tr>
+    <tr>
+        <th>Дата создания</th>
+        <td>@Model.CreationDate.ToString("dd.MM.yyyy")</td>
+    </tr>
+
+    @if (isDisbanded)
+    {
+        <tr>
+            <th>Дата завершения</th>
+            <td>@Model.DisbandmentDate.Value.ToString("dd.MM.yyyy")</td>
+        </tr>
+    }
+
+    <tr>
+        <th>Пасека</th>
+        <td>@Model.Apiary?.Name</td>
+    </tr>
+
+    @if (ViewBag.LastInspection != null)
+    {
+        var last = ViewBag.LastInspection as Inspection;
+
+        <tr>
+            <th>Последний осмотр</th>
+            <td>@last.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
+        </tr>
+        <tr>
+            <th>Сила семьи</th>
+            <td>@last.StrengthInFrames рам.</td>
+        </tr>
+        <tr>
+            <th>Всего рамок</th>
+            <td>@last.TotalFrames</td>
+        </tr>
+        <tr>
+            <th>Расплод</th>
+            <td>@last.BroodFrames рам.</td>
+        </tr>
+        <tr>
+            <th>Корм</th>
+            <td>@last.FoodAmountKg кг</td>
+        </tr>
+    }
+    else
+    {
+        <tr>
+            <th>Последний осмотр</th>
+            <td>Нет данных</td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+<br>
+<br>
+<h3>Матка</h3>
+@if (ViewBag.Queen != null)
+{
+    var queen = ViewBag.Queen as Queen;
+    <table class="table table-hover">
+        <tr>
+            <th>Год рождения:</th>
+            <td>@queen.StartDate</td>
+        </tr>
+        @if (@queen.EndDate != null)
+        {
+            <tr>
+                <th>Год списания/смерти:</th>
+                <td>@queen.EndDate</td>
+            </tr>
+        }
+        <tr>
+            <th>Порода:</th>
+            <td>@queen.Breed</td>
+        </tr>
+        <tr>
+            <th>Линия:</th>
+            <td>@queen.Line</td>
+        </tr>
+    </table>
+
+    <a asp-controller="Queen" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Изменить данные о матке</a>
+}
+else
+{
+    <p>Матка не указана</p>
+}
+
+<br>
+<br>
+<h3>История осмотров</h3>
+
+@if (ViewBag.Inspections != null && ((List<Inspection>)ViewBag.Inspections).Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Дата и время</th>
+                <th>Сила семьи</th>
+                <th>Расплод</th>
+                <th>Корм</th>
+                <th>Примечания</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inspection in (List<Inspection>)ViewBag.Inspections)
+            {
+                <tr>
+                    <td>@inspection.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@inspection.StrengthInFrames рам.</td>
+                    <td>@inspection.BroodFrames рам.</td>
+                    <td>@inspection.FoodAmountKg кг</td>
+                    <td>@(inspection.Notes?.Length > 50 ? inspection.Notes.Substring(0, 50) + "..." : inspection.Notes)</td>
+                    <td>
+                        <a asp-controller="Inspection" asp-action="Details" asp-route-id="@inspection.Id">Просмотр</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Осмотры не проводились</p>
+}
+@if (ViewBag.LastInspection != null)
+{
+    <a asp-controller="Inspection"
+       asp-action="Index"
+       asp-route-id="@Model.Id"
+       class="btn btn-warning">
+        Все осмотры
+    </a>
+}
+<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Новый осмотр</a>
+
+
+<br>
+<br>
+<h3>Заболевания и лечение</h3>
+
+@if (ViewBag.Diseases != null && ((List<ColonyDisease>)ViewBag.Diseases).Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Заболевание</th>
+                <th>Дата начала</th>
+                <th>Дата конца</th>
+                <th>Лечение</th>
+                <th>Дата начала лечения</th>
+                <th>Дата конца лечения</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var disease in (List<ColonyDisease>)ViewBag.Diseases)
+            {
+                <tr>
+                    <td>@disease.Disease?.Name</td>
+                    <td>@disease.StartDate.ToString("dd.MM.yyyy")</td>
+                    <td>@disease.EndDate?.ToString("dd.MM.yyyy")</td>
+                    
+                    @if (ViewBag.Therapies != null)
+                    {
+                        var therapies = ((List<Therapy>)ViewBag.Therapies)
+                        .Where(t => t.DiseaseId == disease.DiseaseId)
+                        .ToList();
+                        <td>
+                            @foreach (var therapy in therapies)
+                            {
+                                @therapy.TherapyType?.Name <br>
+                            }
+                        </td>
+                        <td>
+                            @foreach (var therapy in therapies)
+                            {
+                                @therapy.StartDate.ToString("dd.MM.yyyy") <br>
+                            }
+                        </td>
+                        <td>
+                            @foreach (var therapy in therapies)
+                            {
+                                @therapy.EndDate.ToString("dd.MM.yyyy") <br>
+                            }
+                        </td>
+                    }
+
+                </tr>
+                
+            }
+            @foreach (var product in (List<ColonyProduct>)ViewBag.Products)
+            {
+                
+            }
+        </tbody>
+    </table>
+    
+}
+else
+{
+    <p>Заболевания не зафиксированы</p>
+}
+
+<br>
+<h3>Собранная продукция</h3>
+
+@if (ViewBag.Products != null && ((List<ColonyProduct>)ViewBag.Products).Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Дата сбора</th>
+                <th>Продукт</th>
+                <th>Количество</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in (List<ColonyProduct>)ViewBag.Products)
+            {
+                <tr>
+                    <td>@product.HarvestDate.ToString("dd.MM.yyyy")</td>
+                    <td>@product.Product?.Name</td>
+                    <td>@product.Amount</td>
+                    <td>@product.Unit?.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Продукция не собиралась</p>
+}
+
+<br>
+<h3>История зимовок</h3>
+@if (ViewBag.Winterings != null && ((List<ColonyWintering>)ViewBag.Winterings).Any())
+{
+    @foreach (var wintering in (List<ColonyWintering>)ViewBag.Winterings)
+    {
+        <div>Зимовка @wintering.StartYear-@wintering.EndYear</div>
+        <div>Условия: @wintering.Conditions</div>
+    }
+}
+else
+{
+    <p>Данные о зимовках отсутствуют</p>
+}
+
+<br>
+<h3>Заметки</h3>
+
+@if (ViewBag.Notes != null && ((List<ColonyNote>)ViewBag.Notes).Any())
+{
+    @foreach (var note in (List<ColonyNote>)ViewBag.Notes)
+    {
+        <span>@note.Date.ToString("dd.MM.yyyy")</span>
+        <span>@note.Title</span>
+        <div>@note.Text</div>
+    }
+}
+else
+{
+    <p>Заметок нет</p>
+}
+<a asp-controller="ColonyNotes" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Добавить заметку</a>
+
+
+@if (ViewBag.Pollinations != null && ((List<ColonyPollination>)ViewBag.Pollinations).Any())
+{
+    <br>
+    <h3>Опыление</h3>
+}
+
+@if (ViewBag.Swarmings != null && ((List<ColonySwarming>)ViewBag.Swarmings).Any())
+{
+    <br>
+    <h3>Роение</h3>
+}

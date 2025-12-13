@@ -13,6 +13,25 @@ namespace ApiaryManagementSystem.Services.InspectionService
             _context = context;
         }
 
+        public async Task Create(Inspection inspection)
+        {
+            try
+            {
+                await _context.AddAsync(inspection);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Произошла ошибка при создании :(", ex);
+            }
+        }
+
+        public async Task<Inspection> GetLast(int id)
+        {
+            var lastInspectionDate = _context.Inspections.Max(i => i.DateTime);
+            return await _context.Inspections.Where(i => i.DateTime == lastInspectionDate && i.BeeColonyId == id).FirstAsync();
+        }
+
         public async Task<List<Inspection>> GetAll()
         {
             return await _context.Inspections.ToListAsync();

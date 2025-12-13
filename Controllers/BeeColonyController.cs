@@ -86,5 +86,68 @@ namespace ApiaryManagementSystem.Controllers
 
             return View(colony);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var colony = await _context.BeeColonies
+                .Include(c => c.Apiary)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (colony == null) return NotFound();
+
+            ViewBag.LastInspection = await _context.Inspections
+                .Where(i => i.BeeColonyId == id)
+                .OrderByDescending(i => i.DateTime)
+                .FirstOrDefaultAsync();
+
+            ViewBag.Inspections = await _context.Inspections
+                .Where(i => i.BeeColonyId == id)
+                .OrderByDescending(i => i.DateTime)
+                .Take(10)
+                .ToListAsync();
+
+            ViewBag.Queen = await _context.Queens
+                .FirstOrDefaultAsync(q => q.BeeColonyId == id);
+
+            ViewBag.Diseases = await _context.ColonyDiseases
+                .Include(cd => cd.Disease)
+                .Where(cd => cd.Inspection.BeeColonyId == id)
+                .ToListAsync();
+
+            ViewBag.Therapies = await _context.Therapies
+                .Include(t => t.TherapyType)
+                .Where(t => t.Inspection.BeeColonyId == id)
+                .ToListAsync();
+
+            ViewBag.Products = await _context.ColonyProducts
+                .Include(cp => cp.Product)
+                .Include(cp => cp.Unit)
+                .Where(cp => cp.BeeColonyId == id)
+                .OrderByDescending(cp => cp.HarvestDate)
+                .ToListAsync();
+
+            ViewBag.Winterings = await _context.ColonyWinterings
+                .Where(cw => cw.BeeColonyId == id)
+                .OrderByDescending(cw => cw.StartYear)
+                .ToListAsync();
+
+            ViewBag.Notes = await _context.ColonyNotes
+                .Where(cn => cn.BeeColonyId == id)
+                .OrderByDescending(cn => cn.Date)
+                .Take(5)
+                .ToListAsync();
+
+            ViewBag.Pollinations = await _context.ColonyPollinations
+                .Include(cp => cp.PollinationLocation)
+                .Where(cp => cp.BeeColonyId == id)
+                .ToListAsync();
+
+            ViewBag.Swarmings = await _context.ColonySwarmings
+                .Where(cs => cs.BeeColonyId == id)
+                .ToListAsync();
+
+            return View(colony);
+        }
     }
 }

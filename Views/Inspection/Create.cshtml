@@ -1,0 +1,59 @@
+﻿@using ApiaryManagementSystem.ViewModels
+@model InspectionCreateViewModel
+@{
+    ViewData["Title"] = "Новый осмотр";
+    var inspVM = Model ?? new InspectionCreateViewModel();
+    // ViewData["Title"] = $"Семья {Model.Number}";
+    // var isDisbanded = Model.DisbandmentDate != null;
+}
+<link rel="stylesheet" href="~/css/style.css">
+
+<div class="container">
+    <div class="myContainer">
+
+        <form asp-action="Create" method="post" id="beekeeperForm">
+            @Html.AntiForgeryToken()
+
+            <center><h1>Новый осмотр</h1></center>
+
+            <a asp-controller="BeeColony" asp-action="Details" asp-route-id="@inspVM.BeeColony?.Id">← Назад к списку семей</a>
+
+            <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
+            <input asp-for="BeeColony.Number" class="form-control" />
+            <span asp-validation-for="BeeColony.Number" class="text-danger"></span>
+
+            <label asp-for="BeeColony.CreationDate" class="control-label">Дата создания семьи</label>
+            <input asp-for="BeeColony.CreationDate" class="form-control" readonly />
+
+            <label asp-for="Inspection.StrengthInFrames" class="control-label">Сила семьи</label>
+            <input asp-for="Inspection.StrengthInFrames" type="number" class="form-control" />
+            <span asp-validation-for="Inspection.StrengthInFrames" class="text-danger"></span>
+
+            <label asp-for="Inspection.TotalFrames" class="control-label">Всего рамок</label>
+            <input asp-for="Inspection.TotalFrames" type="number" class="form-control" />
+            <span asp-validation-for="Inspection.TotalFrames" class="text-danger"></span>
+
+            <label asp-for="Inspection.BroodFrames" class="control-label">Расплод (рамок)</label>
+            <input asp-for="Inspection.BroodFrames" type="number" class="form-control" />
+            <span asp-validation-for="Inspection.BroodFrames" class="text-danger"></span>
+
+            <label asp-for="Inspection.FoodAmountKg" class="control-label">Корм (кг)</label>
+            <input asp-for="Inspection.FoodAmountKg" type="number" class="form-control" />
+            <span asp-validation-for="Inspection.FoodAmountKg" class="text-danger"></span>
+
+
+
+            <label asp-for="Inspection.Notes" class="control-label">Заметка</label>
+            <textarea asp-for="Inspection.Notes" class="form-control"></textarea>
+            <span asp-validation-for="Inspection.Notes" class="text-danger"></span>
+
+            <label asp-for="QueenId" class="control-label">Поменять матку</label>
+            <select asp-for="QueenId" asp-items="@inspVM.Queens" class="form-control" id="ownerSelect"></select>
+
+            <button type="submit" class="btn btn-submit">
+                Добавить
+            </button>
+
+        </form>
+    </div>
+</div>

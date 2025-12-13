@@ -7,11 +7,12 @@ namespace ApiaryManagementSystem.Models
     {
         [Key]
         public int Id { get; set; }
-        public int BirthYear { get; set; }
+        public DateOnly StartDate { get; set; }
+        public DateOnly? EndDate { get; set; }
         public string? Breed { get; set; }
         public string? Line { get; set; }
 
-        public int BeeColonyId { get; set; }
+        public int? BeeColonyId { get; set; }
 
         public BeeColony? BeeColony { get; set; }
     }

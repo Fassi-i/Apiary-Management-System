@@ -48,11 +48,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b01z722y9a</Fingerprint>
-      <Integrity>JcGqyYTRUJrvwtyPD1WjWljuWV7/q2YKRpnCI3d6sKw=</Integrity>
+      <Fingerprint>tntrl60yiw</Fingerprint>
+      <Integrity>F6RLf+Q8E6TYO2vkSkKlNfmL1zSdpCYnCciPFIyCmtw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bee-colony.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bee-colony-details.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ApiaryManagementSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ApiaryManagementSystem</BasePath>
+      <RelativePath>css/bee-colony-details.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>b5j485ul94</Fingerprint>
+      <Integrity>75U97ZWrkIM+7JyDJubeYowb40P3dQymul+bEt11MxM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bee-colony-details.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\custom-date.css'))">
       <SourceType>Package</SourceType>
@@ -138,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wn5ej5j8i8</Fingerprint>
-      <Integrity>LGs4axEhvJYgM+A6MIw005Khnznn8vx9xY0WIcYLPdY=</Integrity>
+      <Fingerprint>gdaqdanwzx</Fingerprint>
+      <Integrity>BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</OriginalItemSpec>

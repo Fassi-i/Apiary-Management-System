@@ -1,234 +1,53 @@
-﻿/* Стили для карточек пчелиных семей */
+﻿/* Маленькие квадратные карточки ТОЛЬКО с номером */
 .bee-colonies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* Карточка семьи */
+/* Карточка ТОЛЬКО с номером */
 .bee-colony-card {
     background: white;
-    border: 2px solid #eee;
+    border: 1px solid #FFC107;
     border-radius: 8px;
-    padding: 20px;
-    transition: all 0.3s ease;
+    width: 120px;
+    height: 120px;
     display: flex;
-    flex-direction: column;
-    min-height: 200px;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
     .bee-colony-card:hover {
-        border-color: #FFC107;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background: #FFF3E0;
+        box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
     }
 
-    /* Серая карточка для завершённых семей */
+    /* Серая карточка - СЕРАЯ тень при наведении */
     .bee-colony-card.disbanded {
         background: #f5f5f5;
         border-color: #ddd;
-        opacity: 0.8;
+        opacity: 0.7;
     }
 
         .bee-colony-card.disbanded:hover {
+            background: #e0e0e0;
             border-color: #999;
-            opacity: 1;
+            opacity: 0.9;
+            box-shadow: 0 4px 12px rgba(158, 158, 158, 0.3); /* СЕРАЯ тень */
         }
 
-/* Бейдж статуса */
-.status-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-    .status-badge.active {
-        background: #4CAF50;
-        color: white;
-    }
-
-    .status-badge.disbanded {
-        background: #757575;
-        color: white;
-    }
-
-/* Заголовок карточки */
-.bee-colony-header {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.bee-colony-number {
-    font-size: 18px;
+/* ТОЛЬКО номер - большой и по центру */
+.colony-number {
+    font-size: 32px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Информация в карточке */
-.bee-colony-info {
-    flex: 1;
-    margin-bottom: 15px;
-}
-
-.info-line {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #f5f5f5;
-}
-
-    .info-line:last-child {
-        border-bottom: none;
-    }
-
-.info-label {
-    color: #666;
-    font-size: 14px;
-}
-
-.info-value {
-    color: #333;
-    font-weight: 600;
-    text-align: right;
-}
-
-    .info-value.date {
-        color: #333;
-    }
-
-    .info-value.disbanded-date {
-        color: #333;
-    }
-
-/* Кнопка внизу карточки */
-.bee-colony-footer {
-    margin-top: auto;
-}
-
-.btn-inspections {
-    width: 100%;
-    background: #FF9800;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
     text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
 }
 
-    .btn-inspections:hover {
-        background: #F57C00;
-        box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
-        color: white;
-        text-decoration: none;
-    }
-
-/* Для завершённых семей - серая кнопка */
-.bee-colony-card.disbanded .btn-inspections {
-    background: #757575;
-}
-
-    .bee-colony-card.disbanded .btn-inspections:hover {
-        background: #616161;
-    }
-
-
-/* Сводка о состоянии семьи */
-.colony-summary {
-    margin-bottom: 15px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 6px;
-    border-left: 4px solid #FFC107;
-}
-
-.summary-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.summary-title {
-    font-weight: 600;
-    color: #333;
-    font-size: 14px;
-}
-
-.summary-date {
-    font-size: 12px;
+.bee-colony-card.disbanded .colony-number {
     color: #666;
-}
-
-.summary-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.summary-stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-label {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 2px;
-}
-
-.stat-value {
-    font-weight: 600;
-    color: #333;
-    font-size: 14px;
-}
-
-    .stat-value.food {
-        color: #333;
-    }
-
-    .stat-value.brood {
-        color: #333;
-    }
-
-    .stat-value.strength {
-        color: #333;
-    }
-
-    .stat-value.total {
-        color: #333;
-    }
-
-/* Дополнительно для заметок */
-.colony-notes {
-    margin-top: 10px;
-    padding: 10px;
-    background: white;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    font-style: italic;
-    color: #666;
-    font-size: 13px;
-}
-
-.notes-label {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 4px;
-    font-size: 12px;
 }
