@@ -132,10 +132,9 @@ namespace ApiaryManagementSystem.Controllers
                 .OrderByDescending(cw => cw.StartYear)
                 .ToListAsync();
 
-            ViewBag.Notes = await _context.ColonyNotes
+            ViewBag.Notes = await _context.Inspections
                 .Where(cn => cn.BeeColonyId == id)
-                .OrderByDescending(cn => cn.Date)
-                .Take(5)
+                .OrderByDescending(cn => cn.DateTime)
                 .ToListAsync();
 
             ViewBag.Pollinations = await _context.ColonyPollinations

@@ -11,10 +11,10 @@
 
 <br>
 <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"> Редактировать </a>
-<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success"> Новый осмотр </a>
 
 @if (!isDisbanded) 
 { 
+    <a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success"> Новый осмотр </a>
     <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"> Расформировать семью </a> 
 }
 
@@ -173,7 +173,10 @@ else
 {
     <p>Осмотры не проводились</p>
 }
-<a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Новый осмотр</a>
+@if (!isDisbanded)
+{
+    <a asp-controller="Inspection" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Новый осмотр</a>
+}
 
 
 <br>
@@ -307,20 +310,26 @@ else
 
 <h3>Заметки</h3>
 
-@if (ViewBag.Notes != null && ((List<ColonyNote>)ViewBag.Notes).Any())
+@if (ViewBag.Notes != null && ((List<Inspection>)ViewBag.Notes).Any())
 {
-    @foreach (var note in (List<ColonyNote>)ViewBag.Notes)
-    {
-        <span>@note.Date.ToString("dd.MM.yyyy")</span>
-        <span>@note.Title</span>
-        <div>@note.Text</div>
-    }
+    <table class="table table-hover">
+        <tbody>
+            @foreach (var note in (List<Inspection>)ViewBag.Notes)
+            {
+                <tr>
+                    <td>@note.DateTime.ToString("dd.MM.yyyy")</td>
+                    <td>@note.Notes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
 }
 else
 {
     <p>Заметок нет</p>
 }
-<a asp-controller="ColonyNotes" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Добавить заметку</a>
+@* <a asp-controller="ColonyNotes" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Добавить заметку</a> *@
 
 
 @if (ViewBag.Pollinations != null && ((List<ColonyPollination>)ViewBag.Pollinations).Any())
