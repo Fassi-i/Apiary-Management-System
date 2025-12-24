@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiaryManagementSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c401ed06da06d9c2c2e029329f4cc55501da34ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69a349107cee066f38c9ddd02d60845c046375b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiaryManagementSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiaryManagementSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

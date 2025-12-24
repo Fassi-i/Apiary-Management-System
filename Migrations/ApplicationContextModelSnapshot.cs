@@ -33,7 +33,7 @@ namespace ApiaryManagementSystem.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("ApiaryStatusId")
+                    b.Property<int>("ApiaryStatus")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsMobile")
@@ -47,27 +47,9 @@ namespace ApiaryManagementSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApiaryStatusId");
-
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Apiaries");
-                });
-
-            modelBuilder.Entity("ApiaryManagementSystem.Models.ApiaryStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ApiaryStatuses");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.BeeColony", b =>
@@ -124,33 +106,6 @@ namespace ApiaryManagementSystem.Migrations
                     b.HasIndex("InspectionId");
 
                     b.ToTable("ColonyDiseases");
-                });
-
-            modelBuilder.Entity("ApiaryManagementSystem.Models.ColonyNote", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BeeColonyId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BeeColonyId");
-
-                    b.ToTable("ColonyNotes");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.ColonyPollination", b =>
@@ -388,7 +343,7 @@ namespace ApiaryManagementSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Queen", b =>
@@ -471,7 +426,7 @@ namespace ApiaryManagementSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TherapyTypes");
+                    b.ToTable("TherapyType");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Unit", b =>
@@ -531,19 +486,11 @@ namespace ApiaryManagementSystem.Migrations
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Apiary", b =>
                 {
-                    b.HasOne("ApiaryManagementSystem.Models.ApiaryStatus", "ApiaryStatus")
-                        .WithMany()
-                        .HasForeignKey("ApiaryStatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ApiaryManagementSystem.Models.User", "Owner")
                         .WithMany()
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("ApiaryStatus");
 
                     b.Navigation("Owner");
                 });
@@ -576,17 +523,6 @@ namespace ApiaryManagementSystem.Migrations
                     b.Navigation("Disease");
 
                     b.Navigation("Inspection");
-                });
-
-            modelBuilder.Entity("ApiaryManagementSystem.Models.ColonyNote", b =>
-                {
-                    b.HasOne("ApiaryManagementSystem.Models.BeeColony", "BeeColony")
-                        .WithMany()
-                        .HasForeignKey("BeeColonyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("BeeColony");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.ColonyPollination", b =>

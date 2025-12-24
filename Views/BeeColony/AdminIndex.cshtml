@@ -1,0 +1,75 @@
+﻿@model List<BeeColony>
+
+@{
+    ViewData["Title"] = "Пчелиные семьи";
+    var beeColonies = Model ?? new List<BeeColony>();
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Пчелиные семьи</h1>
+            <p>Список всех семей на пасеках</p>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Id Пасека-Семья</th>
+                    <th>Пасека</th>
+                    <th>Пчелосемья</th>
+                    <th>Дата создания</th>
+                    <th>Дата расформирования</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var beeColony in beeColonies)
+                {
+                    <tr>
+                        <td>@beeColony.Apiary.Id-@beeColony.Id</td>
+                        <td>@beeColony.Apiary.Name</td>
+                        <td>@beeColony.Number</td>
+                        <td>@beeColony.CreationDate.ToString("dd.MM.yyyy")</td>
+                        <td>@beeColony.DisbandmentDate?.ToString("dd.MM.yyyy")</td>
+                        <td>
+                            <a asp-controller="BeeColony"
+                               asp-action="Details"
+                               asp-route-id="@beeColony.Id">
+                                Инфо
+                            </a>
+                        </td>
+                        @if (beeColony.DisbandmentDate != null)
+                        {
+                            <td>
+                                <a asp-controller="BeeColony"
+                                   asp-action="Delete"
+                                   asp-route-id="@beeColony.Id">
+                                    Удалить
+                                </a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

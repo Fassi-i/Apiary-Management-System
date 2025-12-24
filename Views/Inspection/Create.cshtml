@@ -1,73 +1,130 @@
 ﻿@using ApiaryManagementSystem.ViewModels
 @model InspectionCreateViewModel
+
 @{
     ViewData["Title"] = "Новый осмотр";
     var inspVM = Model ?? new InspectionCreateViewModel();
-    // ViewData["Title"] = $"Семья {Model.Number}";
-    // var isDisbanded = Model.DisbandmentDate != null;
 }
-<link rel="stylesheet" href="~/css/site.css">
 
-<div class="container">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/custom-select.css">
+    <link rel="stylesheet" href="~/css/custom-date.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
     <div class="myContainer">
+
+        <div class="header">
+            <h1>Новый осмотр</h1>
+            <p>Заполните параметры осмотра семьи</p>
+        </div>
+
+        <a asp-controller="BeeColony"
+           asp-action="Details"
+           asp-route-id="@inspVM.BeeColony?.Id"
+           class="back-link">
+            ← Назад к списку семей
+        </a>
+
 
         <form asp-action="Create" method="post" id="beekeeperForm">
             @Html.AntiForgeryToken()
 
-            <center><h1>Новый осмотр</h1></center>
-
-            <a asp-controller="BeeColony" asp-action="Details" asp-route-id="@inspVM.BeeColony?.Id">← Назад к списку семей</a>
-
-            <br>
+            <!-- Блок: основное -->
             <h3>Основное</h3>
 
-            <label asp-for="Inspection.TotalFrames" class="control-label">Всего рамок</label>
-            <input asp-for="Inspection.TotalFrames" type="number" class="form-control" />
-            <span asp-validation-for="Inspection.TotalFrames" class="text-danger"></span>
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="Inspection.TotalFrames" class="control-label">Всего рамок</label>
+                    <input asp-for="Inspection.TotalFrames" type="number" class="form-control" />
+                    <span asp-validation-for="Inspection.TotalFrames" class="text-danger"></span>
+                </div>
 
-            <label asp-for="Inspection.BroodFrames" class="control-label">Расплод (рамок)</label>
-            <input asp-for="Inspection.BroodFrames" type="number" class="form-control" />
-            <span asp-validation-for="Inspection.BroodFrames" class="text-danger"></span>
-
-            <label asp-for="Inspection.FoodAmountKg" class="control-label">Корм (кг)</label>
-            <input asp-for="Inspection.FoodAmountKg" type="number" class="form-control" />
-            <span asp-validation-for="Inspection.FoodAmountKg" class="text-danger"></span>
-
-            <label asp-for="Inspection.Notes" class="control-label">Заметка</label>
-            <textarea asp-for="Inspection.Notes" class="form-control"></textarea>
-            <span asp-validation-for="Inspection.Notes" class="text-danger"></span>
-
-            <label asp-for="Inspection.DateTime" class="control-label">Дата</label>
-            <input asp-for="Inspection.DateTime" type="date" class="form-control" />
-            <span asp-validation-for="Inspection.DateTime" class="text-danger"></span>
-
-
-            <br>
-            <h3>Параметры семьи</h3>
-
-            <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
-            <input asp-for="BeeColony.Number" class="form-control" />
-            <span asp-validation-for="BeeColony.Number" class="text-danger"></span>
-
-            <label asp-for="BeeColony.CreationDate" class="control-label">Дата создания семьи</label>
-            <input asp-for="BeeColony.CreationDate" type="date" class="form-control" readonly />
-
-            <br>
-            <h3>Изменения</h3>
-
-            <label asp-for="QueenId" class="control-label">Поменять матку</label>
-            <select asp-for="QueenId" asp-items="@inspVM.Queens" class="form-control" id="ownerSelect"></select>
-
-            <label asp-for="ApiatyId" class="control-label">Поменять пасеку</label>
-            <select asp-for="ApiatyId" asp-items="@inspVM.Apearies" class="form-control" id="ownerSelect"></select>
-            <br>
-
-            <div class="text-center">
-                <button type="submit" class="btn btn-success btn-lg">
-                    Добавить
-                </button>
+                <div class="form-group required">
+                    <label asp-for="Inspection.BroodFrames" class="control-label">Расплод (рамок)</label>
+                    <input asp-for="Inspection.BroodFrames" type="number" class="form-control" />
+                    <span asp-validation-for="Inspection.BroodFrames" class="text-danger"></span>
+                </div>
             </div>
 
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="Inspection.FoodAmountKg" class="control-label">Корм (кг)</label>
+                    <input asp-for="Inspection.FoodAmountKg" type="number" class="form-control" />
+                    <span asp-validation-for="Inspection.FoodAmountKg" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Inspection.DateTime" class="control-label">Дата</label>
+                    <input asp-for="Inspection.DateTime" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="Inspection.DateTime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Inspection.Notes" class="control-label">Заметка</label>
+                <textarea asp-for="Inspection.Notes" class="form-control"></textarea>
+                <span asp-validation-for="Inspection.Notes" class="text-danger"></span>
+            </div>
+
+            <!-- Блок: параметры семьи -->
+            <h3>Параметры семьи</h3>
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
+                    <input asp-for="BeeColony.Number" class="form-control" readonly />
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BeeColony.CreationDate" class="control-label">Дата создания семьи</label>
+                    <input asp-for="BeeColony.CreationDate" type="date" class="form-control" readonly />
+                </div>
+            </div>
+
+            <!-- Блок: изменения -->
+            <h3>Изменения</h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="QueenId" class="control-label">Поменять матку</label>
+                    <select asp-for="QueenId"
+                            asp-items="@inspVM.Queens"
+                            class="select-input"
+                            id="queenSelect">
+                    </select>
+                    <span asp-validation-for="QueenId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ApiatyId" class="control-label">Поменять пасеку</label>
+                    <select asp-for="ApiatyId"
+                            asp-items="@inspVM.Apearies"
+                            class="select-input"
+                            id="apiarySelect">
+                    </select>
+                    <span asp-validation-for="ApiatyId" class="text-danger"></span>
+                </div>
+            </div>
+            <input asp-for="BeeColony.Id" type="hidden" />
+            <input asp-for="Inspection.BeeColonyId" type="hidden" />
+            <button type="submit" class="btn-submit">
+                Добавить
+            </button>
         </form>
     </div>
-</div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom-select.js"></script>
+    <script src="~/js/custom-date.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

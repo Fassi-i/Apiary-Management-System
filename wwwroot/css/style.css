@@ -95,7 +95,7 @@ input, textarea {
     }
 
     input[type="date"] {
-        padding: 11px;
+        padding: 6px, 12px;
     }
 
 textarea {
@@ -119,7 +119,6 @@ textarea {
 
     .btn-submit:hover {
         background: linear-gradient(135deg, #FF9800, #F57C00);
-        transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
     }
 
@@ -221,7 +220,6 @@ textarea {
 
     .btn-submit:hover {
         background: linear-gradient(135deg, #FF9800, #F57C00);
-        transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
     }
 
@@ -272,3 +270,396 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 }
 
+.btn-main {
+    width: 100%;
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+    .btn-main:hover {
+        background: linear-gradient(135deg, #FF9800, #F57C00);
+        box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        color: white;
+        text-decoration: none;
+    }
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: var(--color-primary, #0066cc);
+    text-decoration: none;
+}
+
+    .back-link:hover {
+        color: var(--color-primary-hover, #004c99);
+        text-decoration: underline;
+    }
+
+    .back-link:active {
+        color: var(--color-primary-active, #003366);
+    }
+
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+    .data-table thead {
+        background-color: #f3f4f6;
+    }
+
+        .data-table thead th {
+            padding: 10px 12px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: left;
+        }
+
+    .data-table tbody td {
+        padding: 8px 12px;
+        font-size: 14px;
+        color: #111827;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .data-table tbody tr:hover {
+        background-color: #f9fafb;
+    }
+
+    .data-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* ссылки внутри таблицы */
+    .data-table a {
+        color: var(--color-primary, #0066cc);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+        .data-table a:hover {
+            color: var(--color-primary-hover, #004c99);
+            text-decoration: underline;
+        }
+
+
+.page-header-with-back {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.page-header {
+    margin: 0;
+}
+
+    .page-header h1 {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .page-header p {
+        margin: 0;
+        font-size: 14px;
+        color: #6b7280;
+    }
+
+.section-title {
+    margin: 24px 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-divider {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.actions-row,
+.section-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-header-row {
+    justify-content: space-between;
+}
+
+/* back-link и data-table ты уже добавлял ранее */
+/* Базовая таблица */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+    /* Общие ячейки */
+    .data-table th,
+    .data-table td {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+/* Горизонтальные (2-колоночные) таблицы-карточки */
+.data-table-compact th {
+    width: 35%;
+    font-weight: 500;
+    color: #4b5563;
+    background-color: #f9fafb;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table-compact td {
+    color: #111827;
+}
+
+/* Последняя строка без нижней границы */
+.data-table-compact tr:last-child th,
+.data-table-compact tr:last-child td {
+    border-bottom: none;
+}
+
+
+.actions-row,
+.section-actions,
+.section-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Базовая кнопка-действие */
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+/* Основная (жёлтая) */
+.action-primary {
+    background-color: #fbbf24; /* тёплый жёлтый */
+    border-color: #f59e0b;
+    color: #78350f; /* тёмно‑коричневый текст для контраста */
+}
+
+    .action-primary:hover {
+        background-color: #f59e0b;
+        border-color: #d97706;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    }
+
+/* Вторичная (нейтральная) */
+.action-secondary {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+    .action-secondary:hover {
+        background-color: #f9fafb;
+        border-color: #d1d5db;
+    }
+
+/* Опасная (красноватая, но вписывается в тёплую палитру) */
+.action-danger {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+    .action-danger:hover {
+        background-color: #fecaca;
+        border-color: #fca5a5;
+    }
+
+.action-button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+/* чтобы bootstrap не красил ссылки внутри наших кнопок */
+.action-button,
+.action-button:hover,
+.action-button:focus,
+.action-button:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* И сразу задаём нужные цвета на самих кнопках */
+
+.action-primary {
+    background-color: #fbbf24;
+    border-color: #f59e0b;
+    color: #78350f;
+}
+
+    .action-primary:hover,
+    .action-primary:focus {
+        background-color: #f59e0b;
+        border-color: #d97706;
+        color: #78350f; /* фиксируем цвет текста */
+    }
+
+.action-secondary {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+    .action-secondary:hover,
+    .action-secondary:focus {
+        background-color: #f9fafb;
+        border-color: #d1d5db;
+        color: #374151;
+    }
+
+.action-danger {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+    .action-danger:hover,
+    .action-danger:focus {
+        background-color: #fecaca;
+        border-color: #fca5a5;
+        color: #b91c1c;
+    }
+
+/* Общий стиль селектов в таблицах */
+.select-input {
+    display: inline-block;
+    min-width: 220px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #9ca3af 50%), linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+    background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+    /* при фокусе/hover - лёгкий акцент */
+    .select-input:hover {
+        border-color: #d1d5db;
+        background-color: #f9fafb;
+    }
+
+    .select-input:focus {
+        border-color: #f59e0b; /* жёлтый акцент */
+        box-shadow: 0 0 0 1px #f59e0b33;
+    }
+
+/* чтобы селект хорошо смотрелся в таблице */
+.data-table td .select-input {
+    width: 100%;
+    max-width: 260px;
+}
+
+
+/* Базовая кнопка */
+.action-button,
+.action-button:link,
+.action-button:visited,
+.action-button:hover,
+.action-button:focus,
+.action-button:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Опасная (красная) кнопка */
+.action-danger {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #b91c1c; /* цвет текста */
+}
+
+    .action-danger:link,
+    .action-danger:visited,
+    .action-danger:hover,
+    .action-danger:focus,
+    .action-danger:active {
+        color: #b91c1c; /* фиксируем один и тот же цвет во всех состояниях */
+    }
+
+    .action-danger:hover,
+    .action-danger:focus {
+        background-color: #fecaca;
+        border-color: #fca5a5;
+    }
+
+/* Общие правила для всех action-кнопок */
+.action-button,
+.action-button:link,
+.action-button:visited,
+.action-button:hover,
+.action-button:focus,
+.action-button:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Опасная (красная) кнопка */
+.action-danger {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #b91c1c;
+}
+
+    /* Фикс цвета ТЕКСТА во всех состояниях, чтобы не был синим */
+    .action-danger:link,
+    .action-danger:visited,
+    .action-danger:hover,
+    .action-danger:focus,
+    .action-danger:active {
+        color: #b91c1c !important;
+    }

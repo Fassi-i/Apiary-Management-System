@@ -11,10 +11,9 @@ namespace ApiaryManagementSystem.Models
         public bool IsMobile { get; set; }
         public string? Address { get; set; }
 
-        public int ApiaryStatusId { get; set; }
+        public int ApiaryStatus { get; set; }
         public int OwnerId { get; set; }
 
-        public ApiaryStatus? ApiaryStatus { get; set; }
         public User? Owner { get; set; }
     }
 }

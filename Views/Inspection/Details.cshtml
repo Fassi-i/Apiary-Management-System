@@ -2,7 +2,14 @@
 @{
     var inpections = Model ?? new List<Inspection>();
 }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
 
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
 <h1>Семья @ViewBag.ApiaryNumber</h1>
 <a asp-controller="BeeColony" asp-action="Details" asp-route-id="@ViewBag.ApiaryId">← Назад к семье</a>
 <br>
@@ -10,7 +17,7 @@
 
 @if (inpections != null && inpections.Any())
 {
-    <table class="table table-hover">
+    <table class="data-table">
         <thead>
             <tr>
                 <th>Дата и время</th>

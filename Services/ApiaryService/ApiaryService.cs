@@ -45,6 +45,45 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
             }
         }
 
+        //Переделать
+        public async Task SoftDelete(int Id)
+        {
+            try
+            {
+                var apiary = await _context.Apiaries.FindAsync(Id);
+                if (apiary == null)
+                {
+                    throw new InvalidOperationException($"ID {Id} не найдено :(");
+                }
+                apiary.ApiaryStatus = -1;
+                _context.Apiaries.Update(apiary);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Произошла ошибка при удалении :(", ex);
+            }
+        }
+
+        public async Task Repair(int Id)
+        {
+            try
+            {
+                var apiary = await _context.Apiaries.FindAsync(Id);
+                if (apiary == null)
+                {
+                    throw new InvalidOperationException($"ID {Id} не найдено :(");
+                }
+                apiary.ApiaryStatus = 0;
+                _context.Apiaries.Update(apiary);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Произошла ошибка при удалении :(", ex);
+            }
+        }
+
         public async Task<Apiary> GetById(int Id)
         {
             try

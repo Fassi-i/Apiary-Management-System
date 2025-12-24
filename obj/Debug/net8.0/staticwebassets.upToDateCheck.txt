@@ -4,6 +4,7 @@ wwwroot\css\bee-colony-details.css
 wwwroot\css\custom-date.css
 wwwroot\css\custom-multiple-select.css
 wwwroot\css\custom-select.css
+wwwroot\css\select.css
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico

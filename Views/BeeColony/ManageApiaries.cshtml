@@ -1,0 +1,93 @@
+﻿@model List<BeeColony>
+
+@{
+    ViewData["Title"] = "Перемещение семей";
+    var colonies = Model ?? new List<BeeColony>();
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/custom-select.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Пчелосемьи и пасеки</h1>
+            <p>Изменение принадлежности семей к пасекам</p>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Пасека</th>
+                    <th>Семья</th>
+                    <th>Дата создания</th>
+                    <th>Дата расформирования</th>
+                    <th>Изменить</th>
+                    <th>Изменить пасеку</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var colony in colonies)
+                {
+                    <tr>
+                        <td>@colony.Id</td>
+                        <td>@colony.Apiary?.Name</td>
+                        <td>@colony.Number</td>
+                        <td>@colony.CreationDate.ToString("dd.MM.yyyy")</td>
+                        <td>@colony.DisbandmentDate?.ToString("dd.MM.yyyy")</td>
+                        <td>
+                            <a asp-controller="BreeColony"
+                               asp-action="Details"
+                               asp-route-id="@colony.Id"
+                               class="back-link">
+                                Подробнее
+                            </a>
+                        </td>
+                        <td>
+                            <form asp-controller="BeeColony"
+                                  asp-action="ChangeApiary"
+                                  method="post"
+                                  class="inline-form">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@colony.Id" />
+
+                                @{
+                                    var apiaries = (IEnumerable<SelectListItem>)ViewBag.Apiaries;
+                                }
+
+                                <select name="apiaryId"
+                                        class="select-input"
+                                        onchange="this.form.submit()">
+                                    @foreach (var item in apiaries)
+                                    {
+                                        var isSelected = colony.ApiaryId == int.Parse(item.Value);
+                                        if (isSelected)
+                                        {
+                                            @Html.Raw($"<option value=\"{item.Value}\" selected=\"selected\">{item.Text}</option>")
+                                        }
+                                        else
+                                        {
+                                            @Html.Raw($"<option value=\"{item.Value}\">{item.Text}</option>")
+                                        }
+                                    }
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

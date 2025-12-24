@@ -1,0 +1,135 @@
+﻿@using System.Security.Claims
+@model List<User>
+
+@{
+    ViewData["Title"] = "Пользователи";
+    var users = Model ?? new List<User>();
+    var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        .actions-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            max-width: 400px;
+        }
+
+            .search-form .form-control {
+                flex: 1;
+            }
+    </style>
+    <div class="container">
+        <div class="header">
+            <h1>Пользователи</h1>
+            <p>Список всех пользователей системы</p>
+        </div>
+        <div class="actions-row">
+            <form asp-action="AdminIndex" method="get" class="search-form">
+                        <select name="positionId"
+                                class="form-control"
+                                style="max-width: 200px;">
+                            <option value="">Все должности</option>
+                            @foreach (var pos in (IEnumerable<SelectListItem>)ViewBag.Positions)
+                            {
+                                <option value="@pos.Value"
+                                        selected="@(ViewData["CurrentPosition"]?.ToString() == pos.Value ? "selected" : null)">
+                                    @pos.Text
+                                </option>
+                            }
+                        </select>
+
+                <input type="text"
+                       name="search"
+                       value="@(ViewData["CurrentFilter"] ?? "")"
+                       placeholder="Поиск по ФИО"
+                       class="form-control" />
+
+                <button type="submit" class="action-button action-secondary">
+                    Найти
+                </button>
+            </form>
+
+            <a asp-controller="User"
+               asp-action="Create"
+               class="action-button action-primary">
+                Добавить пользователя
+            </a>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>ФИО</th>
+                    <th>Логин</th>
+                    <th>Должность</th>
+                    <th>Дата рождения</th>
+                    <th>Место проживания</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in users)
+                {
+                    <tr>
+                        <td>#@user.Id.ToString().PadLeft(4, '0')</td>
+                        <td>@user.LastName @user.FirstName @user.MiddleName</td>
+                        <td>@user.Login</td>
+                        <td>@user.Position?.PositionName</td>
+                        <td>@user.BirthDate.ToString("dd.MM.yyyy")</td>
+                        <td>@user.Location</td>
+                        <td>
+                            @* редактировать всех, кроме себя *@
+                            @if (currentUserId != null && currentUserId != user.Id.ToString())
+                            {
+                                <a asp-controller="User"
+                                   asp-action="Edit"
+                                   asp-route-id="@user.Id"
+                                   class="action-button action-secondary">
+                                    Редактировать
+                                </a>
+                            }
+                        </td>
+                        <td>
+                            @* редактировать всех, кроме себя *@
+                            @if (currentUserId != null && currentUserId != user.Id.ToString())
+                            {
+                                <a asp-controller="User"
+                                   asp-action="Delete"
+                                   asp-route-id="@user.Id"
+                                   class="action-button action-danger">
+                                    Удалить
+                                </a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

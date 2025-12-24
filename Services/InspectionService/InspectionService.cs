@@ -29,7 +29,15 @@ namespace ApiaryManagementSystem.Services.InspectionService
         public async Task<Inspection> GetLast(int id)
         {
             var lastInspectionDate = _context.Inspections.Max(i => i.DateTime);
-            return await _context.Inspections.Where(i => i.DateTime == lastInspectionDate && i.BeeColonyId == id).FirstAsync();
+            var inspections = _context.Inspections.Where(i => i.DateTime == lastInspectionDate && i.BeeColonyId == id);
+            if (inspections.Count() < 1)
+            {
+                return null;
+            }
+            else
+            {
+                return await inspections.FirstAsync();
+            }
         }
 
         public async Task<List<Inspection>> GetAll()

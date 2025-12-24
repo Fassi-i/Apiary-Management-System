@@ -39,11 +39,14 @@ namespace ApiaryManagementSystem.Controllers
         {
             var now = DateOnly.FromDateTime(DateTime.Now);
 
-            var currentQueen = await _context.Queens
-                .Include(i => i.BeeColony)
-                .FirstOrDefaultAsync(q => q.BeeColonyId == id && (q.EndDate == null || q.EndDate > now));
+            var beeColony = await _context.BeeColonies
+                .FirstOrDefaultAsync(c => c.Id == id);
 
-            var currentBeeColony = currentQueen?.BeeColony;
+            if (beeColony == null)
+                return NotFound();
+
+            var currentQueen = await _context.Queens
+                .FirstOrDefaultAsync(q => q.BeeColonyId == id && (q.EndDate == null || q.EndDate > now));
 
             var queens = await _context.Queens
                 .Where(q => q.EndDate == null || q.EndDate > now)
@@ -56,13 +59,13 @@ namespace ApiaryManagementSystem.Controllers
                 })
                 .ToListAsync();
 
+            var ownerId = Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var apearies = await _context.Apiaries
-                //Если нужны все пасеки - убрать Where
-                .Where(a => a.OwnerId == Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier).Value))
-                .Select(q => new SelectListItem
+                .Where(a => a.OwnerId == ownerId)
+                .Select(a => new SelectListItem
                 {
-                    Value = q.Id.ToString(),
-                    Text = q.Name + " " + q.Address
+                    Value = a.Id.ToString(),
+                    Text = a.Name + " " + a.Address
                 })
                 .ToListAsync();
 
@@ -70,15 +73,57 @@ namespace ApiaryManagementSystem.Controllers
             lastInspection.DateTime = DateTime.Now;
             lastInspection.Notes = string.Empty;
 
-            return View(new InspectionCreateViewModel(id)
+            var vm = new InspectionCreateViewModel(id)
             {
                 Queens = queens,
                 QueenId = currentQueen?.Id,
                 Inspection = lastInspection,
                 Apearies = apearies,
-                ApiatyId = currentBeeColony?.ApiaryId,
-                BeeColony = currentBeeColony
-            });
+                ApiatyId = beeColony.ApiaryId,
+                BeeColony = beeColony
+            };
+
+            return View(vm);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(InspectionCreateViewModel model)
+        {
+            // на всякий случай, если Id не пришёл
+            if (model.BeeColony == null || model.BeeColony.Id == 0)
+                return BadRequest("Не передан идентификатор семьи");
+
+            // привязка осмотра к семье
+            model.Inspection.BeeColonyId = model.BeeColony.Id;
+
+            await _inspectionService.Create(model.Inspection);
+
+            if (model.QueenId.HasValue)
+            {
+                var queen = await _context.Queens
+                    .FirstOrDefaultAsync(q => q.Id == model.QueenId.Value);
+
+                if (queen != null)
+                {
+                    queen.BeeColonyId = model.BeeColony.Id;
+                }
+            }
+
+            if (model.ApiatyId.HasValue)
+            {
+                var colony = await _context.BeeColonies
+                    .FirstOrDefaultAsync(c => c.Id == model.BeeColony.Id);
+
+                if (colony != null)
+                {
+                    colony.ApiaryId = model.ApiatyId.Value;
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", "BeeColony", new { id = model.BeeColony.Id });
+        }
+
     }
 }

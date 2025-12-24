@@ -20,12 +20,13 @@
             <div class="header-stats">
                 <span class="stat-item">
                     Всего: <strong>@beeColonies.Count</strong>
-                </span>
+                </span><br>
+                <a asp-controller="BeeColony" asp-action="Create">добавить новую</a>
             </div>
         </div>
 
         <div class="bee-colonies-grid">
-            @foreach (var colony in beeColonies.OrderBy(c => c.Number))
+            @foreach (var colony in beeColonies)
             {
                 var isDisbanded = colony.DisbandmentDate != null;
 

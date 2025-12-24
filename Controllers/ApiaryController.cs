@@ -60,7 +60,7 @@ namespace ApiaryManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Apiary apiary)
         {
-            apiary.ApiaryStatusId = 1;
+            apiary.ApiaryStatus = 1;
             if (ModelState.IsValid)
             {
                 apiary.Id = 0;
@@ -93,22 +93,43 @@ namespace ApiaryManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, Apiary user)
         {
-            if (id != user.Id) return View("NotFound");
+            if (id != user.Id)
+                return View("NotFound");
 
             if (!ModelState.IsValid)
-            {
                 return View(user);
-            }
 
             await _service.Update(user);
+
+            // если админ – на AdminIndex
+            if (User.IsInRole("Администратор"))
+            {
+                return RedirectToAction("AdminIndex", "Apiary");
+            }
+
+            // иначе на обычный Index
             return RedirectToAction("Index", "Apiary");
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> SoftDelete(int id)
+        {
+            await _service.SoftDelete(id);
+            return RedirectToAction("Index", "Apiary");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Restore(int id)
+        {
+            await _service.Repair(id);
+            return RedirectToAction("Index", "Apiary");
+        }
+
         private async Task LoadUsers()
         {
             var users = await _context.Users
-                .Include(u => u.Position) 
+                .Include(u => u.Position)
                 .Select(u => new SelectListItem
                 {
                     Value = u.Id.ToString(),
@@ -117,6 +138,30 @@ namespace ApiaryManagementSystem.Controllers
                 .ToListAsync();
 
             ViewBag.Users = users;
+        }
+
+        [Authorize(Policy = "SeniorBeekeeper")]
+        public async Task<IActionResult> AdminIndex()
+        {
+            var apiaries = await _context.Apiaries
+                .Include(a => a.Owner)
+                .ToListAsync();
+
+            return View(apiaries);
+        }
+
+        [HttpGet]
+        [Authorize(Policy = "SeniorBeekeeper")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var apiary = await _context.Apiaries.FindAsync(id);
+            if (apiary == null)
+                return NotFound();
+
+            _context.Apiaries.Remove(apiary);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(AdminIndex));
         }
     }
 }

@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Добавление пасеки";
     Layout = "_Layout";
+    var apiary = Model ?? new Apiary();
 }
 
 <link rel="stylesheet" href="~/css/style.css">
@@ -59,9 +60,29 @@
             <button type="submit" class="btn-submit">
                 Сохранить
             </button>
+            <br>
+            <br>
+            @if(apiary.ApiaryStatus != -1)
+            {
+                <a asp-controller="Apiary"
+                    asp-action="SoftDelete"
+                    asp-route-id="@apiary.Id"
+                   class="action-button action-danger">
+                    Поместить на удаление
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Apiary"
+                   asp-action="Restore"
+                   asp-route-id="@apiary.Id"
+                    class="action-button action-secondary">
+                    Отменить удаление
+                </a>
+            }
 
             <input type="hidden" asp-for="Id" class="form-control" />
-            <input type="hidden" asp-for="ApiaryStatusId" class="form-control" />
+            <input type="hidden" asp-for="ApiaryStatus" class="form-control" />
         </form>
     </div>
 </div>

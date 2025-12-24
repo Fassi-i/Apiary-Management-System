@@ -7,6 +7,7 @@ namespace ApiaryManagementSystem.Services.ApiaryServices
     public class BeeColonyService : IBeeColonyService
     {
         private readonly ApplicationDbContext _context;
+
         public BeeColonyService(ApplicationDbContext context)
         {
             _context = context;

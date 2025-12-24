@@ -1,38 +1,74 @@
 ﻿@model BeeColony
 
 @{
-    ViewData["Title"] = "Добавление пчелосемьи";
+    bool isCreate = Model == null || Model.Id == 0;
+    ViewData["Title"] = isCreate ? "Добавление пчелосемьи" : "Изменение пчелосемьи";
     Layout = "_Layout";
 }
 
 <link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/custom-date.css">
 <link rel="stylesheet" href="~/css/custom-select.css">
 
 <div class="container">
     <div class="myContainer">
         <div class="header">
-            <h1>Добавление пчелосемьи</h1>
+            <h1>@(isCreate ? "Добавление пчелосемьи" : "Изменение пчелосемьи")</h1>
             <p>Заполните следующую информацию</p>
         </div>
 
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="alert alert-success">
-                @TempData["SuccessMessage"]
-            </div>
-        }
-
-        <form asp-action="Create" method="post" id="beekeeperForm">
+        <form asp-action="@(isCreate ? "Create" : "Edit")" method="post" id="beekeeperForm">
             @Html.AntiForgeryToken()
 
-            
+            @* для Edit понадобится Id *@
+            @if (Model?.Id > 0)
+            {
+                <input type="hidden" asp-for="Id" />
+            }
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="Number" class="control-label">Номер пчелосемьи</label>
+                    <input asp-for="Number" class="form-control" />
+                    <span asp-validation-for="Number" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="ApiaryId" class="control-label">Выберете пасеку</label>
+                    <select asp-for="ApiaryId"
+                            asp-items="ViewBag.Apiaries"
+                            class="select-input"
+                            id="apiarySelect">
+                    </select>
+                    <span asp-validation-for="ApiaryId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const apiarySelect = document.getElementById('apiarySelect');
+
+                    // Если это создание (Id == 0 или null) и есть CurrentApiary – ставим её по умолчанию
+                    const isCreate = '@(Model == null || Model.Id == 0)' === 'True';
+                    const currentApiary = '@(ViewBag.CurrentApiary ?? "")';
+
+                    if (isCreate && currentApiary) {
+                        apiarySelect.value = currentApiary;
+                    }
+
+                    // Для Edit ничего не трогаем: asp-for уже поставил ApiaryId
+                });
+            </script>
 
             <button type="submit" class="btn-submit">
-                Добавить
+                Сохранить
             </button>
         </form>
     </div>
 </div>
-</style>
+
 <script src="~/js/custom-select.js"></script>
+<script src="~/js/custom-date.js"></script>
 <partial name="_ValidationScriptsPartial" />

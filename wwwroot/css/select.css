@@ -1,0 +1,112 @@
+﻿select {
+    appearance: none;
+
+    @supports (appearance: base-select) {
+        &,
+        &::picker(select) {
+            appearance: base-select;
+        }
+    }
+}
+
+select {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    align-items: center;
+    color: #333;
+    padding-block: 6px;
+    padding-inline: 6px 30px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-weight: 400;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23666' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A") right 12px center / 12px no-repeat;
+
+    @supports (appearance: base-select) {
+        padding-inline: 6px;
+        background-image: none;
+
+        &::picker-icon {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23666' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+            transition: rotate 0.2s ease-out;
+        }
+
+        &:open::picker-icon {
+            rotate: 180deg;
+        }
+
+        &::picker(select) {
+            padding: 0;
+            margin-top: 5px;
+            border: 2px solid #FFC107;
+            background: white;
+            border-radius: 5px;
+            font-weight: 400;
+            opacity: 0;
+            height: 0;
+            overflow: clip;
+            transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s, display 0.5s;
+            transition-behavior: allow-discrete;
+        }
+
+        &:open::picker(select) {
+            opacity: 1;
+            height: calc-size(auto, size);
+            overflow: auto;
+
+            @starting-style {
+                opacity: 0;
+                height: 0;
+            }
+        }
+
+        option {
+            padding: 12px;
+            border-top: 1px solid #FFC107;
+            cursor: pointer;
+            transition-property: color, background;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+            &:where(:hover, :focus, :active)
+
+{
+    background: #FFF3E0;
+    color: #333;
+}
+
+&:checked {
+    background: #FFC107;
+    color: #333;
+}
+
+&::checkmark {
+    display: none;
+}
+
+&:first-child {
+    border: 0;
+}
+
+}
+}
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

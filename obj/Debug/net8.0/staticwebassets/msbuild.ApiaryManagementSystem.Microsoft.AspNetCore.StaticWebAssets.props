@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5h8kufvuzd</Fingerprint>
-      <Integrity>F657sM/undKtIooLCPsIL5lrEilI5t99ekc3pFeAsfk=</Integrity>
+      <Fingerprint>sqx1cur1vp</Fingerprint>
+      <Integrity>FBXsdxCBvCpJ6/Esvs32EYXkFTACTplqVgEPQw6hQO0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\apiary-cards.css'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2d6741n2do</Fingerprint>
-      <Integrity>9jPqWxEKmbtOnc9qXPqfAK9DYxeFMi9YQcDeXpAr6Z0=</Integrity>
+      <Fingerprint>p0ay2m2qoc</Fingerprint>
+      <Integrity>x56xy6Fn4zGdzN38cc14JTLOX0ZnAys0VijCnGN1hUU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\custom-date.css'))</OriginalItemSpec>
@@ -120,11 +120,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ccc3ld4v2m</Fingerprint>
-      <Integrity>POomAr+NFlEyxXazVdouLjAdsN47B6s9abjbSM89zlI=</Integrity>
+      <Fingerprint>6pz56zrcp8</Fingerprint>
+      <Integrity>Btqyme4ti0r/EIuoyxH2cZMibEnOSAq8CdomMcrttfI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\custom-select.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\select.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ApiaryManagementSystem</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ApiaryManagementSystem</BasePath>
+      <RelativePath>css/select.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kf5opayrg4</Fingerprint>
+      <Integrity>gM1iQf8UzrzZ6U98ytnk+eWgwcz3aJBjrfX758ALjfc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\select.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))">
       <SourceType>Package</SourceType>
@@ -138,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vbqb79bm42</Fingerprint>
-      <Integrity>C7Wmq3p3Iw0IXkJfebe2SP6FF5kgBu+er4jWSGrH7qQ=</Integrity>
+      <Fingerprint>e9evfdoq5p</Fingerprint>
+      <Integrity>8hxmPnmfGDZ69ap84RASFpuN/SkZfh25vtinAHp1gNE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -156,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gdaqdanwzx</Fingerprint>
-      <Integrity>BLxzxGozciRwQoHz6rpRi2kezfP/KW9MI/KsixFW8Qo=</Integrity>
+      <Fingerprint>2eb8h91ydv</Fingerprint>
+      <Integrity>Vg+6+Jp+kGfX6wlpjV6q9bkGc1NQSrzA6SBWjmIddxI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</OriginalItemSpec>

@@ -42,6 +42,12 @@
                         <div class="apiary-header">
                             <div class="apiary-name">
                                 <h3>@apiary.Name</h3>
+                                @if (apiary.ApiaryStatus == -1)
+                                {
+                                    <span class="apiary-type for-delete">
+                                        Помечена на удаление
+                                    </span>
+                                }
                                 <span class="apiary-type @(apiary.IsMobile ? "mobile" : "stationary")">
                                     @(apiary.IsMobile ? "Выездная" : "Стационарная")
                                 </span>
@@ -90,7 +96,7 @@
 
                         <div class="apiary-footer">
                             <a asp-controller="BeeColony" asp-action="Index" asp-route-apiaryId="@apiary.Id"
-                               class="btn-families">
+                               class="btn-main">
                                 Перейти к семьям
                             </a>
                         </div>

@@ -1,0 +1,78 @@
+﻿@model Queen
+
+@{
+    ViewData["Title"] = "Изменение матки";
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/custom-select.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="myContainer">
+        <div class="header">
+            <h1>Изменение матки</h1>
+            <p>Измените данные матки и нажмите «Сохранить»</p>
+        </div>
+
+        <form asp-action="Edit" method="post" id="queenForm">
+            @Html.AntiForgeryToken()
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="StartDate" class="control-label">Дата рождения</label>
+                    <input asp-for="StartDate" type="date" class="form-control" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="EndDate" class="control-label">Дата конца</label>
+                    <input asp-for="EndDate" type="date" class="form-control"
+                           value="@(Model.EndDate == null ? string.Empty : Model.EndDate?.ToString("yyyy-MM-dd"))" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label asp-for="Breed" class="control-label">Порода</label>
+                    <input asp-for="Breed" type="text" class="form-control" />
+                    <span asp-validation-for="Breed" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Line" class="control-label">Линия</label>
+                    <input asp-for="Line" type="text" class="form-control" />
+                    <span asp-validation-for="Line" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BeeColonyId" class="control-label">Выберете пчелосемью</label>
+                <select asp-for="BeeColonyId"
+                        asp-items="ViewBag.BeeColonies"
+                        class="select-input">
+                </select>
+                <span asp-validation-for="BeeColonyId" class="text-danger"></span>
+            </div>
+
+            <input asp-for="Id" type="hidden" />
+
+            <button type="submit" class="btn-submit">
+                Сохранить
+            </button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom-select.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

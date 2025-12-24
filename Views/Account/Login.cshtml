@@ -4,57 +4,95 @@
     var users = ViewBag.Users as List<User> ?? new List<User>();
 }
 
-<h2>Вход в систему</h2>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
 
-<form method="post">
-    <div class="form-group">
-        <label for="login">Логин</label>
-        <input type="text" name="login" class="form-control" required />
-    </div>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="myContainer">
+        <div class="header">
+            <h1>Вход в систему</h1>
+            <p>Введите ваши учетные данные</p>
+        </div>
 
-    <div class="form-group">
-        <label for="password">Пароль</label>
-        <input type="password" name="password" class="form-control" required />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Войти</button>
-</form>
-
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="alert alert-danger mt-3">
-        @Html.ValidationSummary()
-    </div>
-}
-
-<br />
-<hr />
-<br />
-
-@if (users.Any())
-{
-    <h4>Все пользователи:</h4>
-
-    <form method="post" id="quickLoginForm">
-        <input type="hidden" name="login" id="quickLoginInput" />
-        <input type="hidden" name="password" id="quickPasswordInput" />
-
-        @foreach (var user in users)
+        @if (!ViewData.ModelState.IsValid)
         {
-            <button type="button"onclick="quickLogin('@user.Login', '@user.Password')" style="width: 100%; text-align: left;">
-                @user.LastName @user.FirstName @user.MiddleName <br />
-                <small>Логин: @user.Login</small>
-            </button>
-            <br />
-            <br />
+            <div class="alert alert-danger">
+                @Html.ValidationSummary()
+            </div>
         }
-    </form>
 
-    <script>
-        function quickLogin(login, password) {
-            document.getElementById('quickLoginInput').value = login;
-            document.getElementById('quickPasswordInput').value = password;
-            document.getElementById('quickLoginForm').submit();
+        <form method="post" id="loginForm">
+            @* если нужен антифрод *@
+            @Html.AntiForgeryToken()
+
+            <div class="form-row">
+                <div class="form-group required">
+                    <label for="login" class="control-label">Логин</label>
+                    <input type="text" name="login" id="login" class="form-control" />
+                </div>
+
+                <div class="form-group required">
+                    <label for="password" class="control-label">Пароль</label>
+                    <input type="password" name="password" id="password" class="form-control" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Войти
+            </button>
+        </form>
+
+        @if (users.Any())
+        {
+            <br />
+            <hr />
+            <br />
+
+            <div class="header">
+                <h4>Все пользователи</h4>
+                <p>Выберите пользователя для быстрого входа</p>
+            </div>
+
+            <form method="post" id="quickLoginForm">
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" name="login" id="quickLoginInput" />
+                <input type="hidden" name="password" id="quickPasswordInput" />
+
+                @* структура списка — одна колонка, каждая кнопка на всю ширину *@
+                <div class="form-row">
+                    <div class="form-group" style="width: 100%;">
+                        @foreach (var user in users)
+                        {
+                            <button type="button"
+                                    onclick="quickLogin('@user.Login', '@user.Password')"
+                                    style="width: 100%; text-align: left; margin-bottom: 10px;">
+                                @user.LastName @user.FirstName @user.MiddleName <br />
+                                <small>Логин: @user.Login</small>
+                            </button>
+                        }
+                    </div>
+                </div>
+            </form>
+
+            <script>
+                function quickLogin(login, password) {
+                    document.getElementById('quickLoginInput').value = login;
+                    document.getElementById('quickPasswordInput').value = password;
+                    document.getElementById('quickLoginForm').submit();
+                }
+            </script>
         }
-    </script>
-}
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@model List<Queen>
+
+@{
+    ViewData["Title"] = "Матки";
+    var queens = Model ?? new List<Queen>();
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/custom-select.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Матки</h1>
+            <p>Список всех маток</p>
+        </div>
+
+        <div class="actions-row">
+            <a asp-controller="Queen"
+               asp-action="Create"
+               class="action-button action-primary">
+                Добавить матку
+            </a>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Номер</th>
+                    <th>Год рождения</th>
+                    <th>Год списания</th>
+                    <th>Порода</th>
+                    <th>Линия</th>
+                    <th>Пасека</th>
+                    <th>Семья</th>
+                    <th>Изменить семью</th>
+                    <th>Редактировать</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var queen in queens)
+                {
+                    <tr>
+                        <td>#@queen.Id.ToString().PadLeft(4, '0')</td>
+                        <td>@queen.StartDate.ToString("dd.MM.yyyy")</td>
+                        <td>@queen.EndDate?.ToString("dd.MM.yyyy")</td>
+                        <td>@queen.Breed</td>
+                        <td>@queen.Line</td>
+                        <td>@queen.BeeColony?.Apiary?.Name</td>
+                        <td>@queen.BeeColony?.Number</td>
+                        <td>
+                            <form asp-controller="Queen"
+                                  asp-action="ChangeColony"
+                                  method="post"
+                                  class="inline-form">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@queen.Id" />
+
+                                @{
+                                    var colonies = (IEnumerable<SelectListItem>)ViewBag.BeeColonies;
+                                }
+
+                                <select name="beeColonyId"
+                                        class="select-input"
+                                        onchange="this.form.submit()">
+                                    <option value="">— Не привязана —</option>
+
+                                    @foreach (var item in colonies)
+                                    {
+                                        var isSelected = queen.BeeColonyId.HasValue &&
+                                        queen.BeeColonyId.Value.ToString() == item.Value;
+
+                                        if (isSelected)
+                                        {
+                                            @Html.Raw($"<option value=\"{item.Value}\" selected=\"selected\">{item.Text}</option>")
+                                        }
+                                        else
+                                        {
+                                            @Html.Raw($"<option value=\"{item.Value}\">{item.Text}</option>")
+                                        }
+                                    }
+                                </select>
+                            </form>
+                        </td>
+                        <td>
+                            <a asp-controller="Queen"
+                               asp-action="Edit"
+                               asp-route-id="@queen.Id"
+                               class="action-button action-secondary">
+                                Редактировать
+                            </a>
+                        </td>
+                        <td>
+                            <a asp-controller="Queen"
+                               asp-action="Delete"
+                               asp-route-id="@queen.Id"
+                               class="action-button action-danger">
+                                Удалить
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

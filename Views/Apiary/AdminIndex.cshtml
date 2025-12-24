@@ -1,0 +1,81 @@
+﻿@model List<Apiary>
+
+@{
+    ViewData["Title"] = "Пасеки (админ)";
+    var apiaries = Model ?? new List<Apiary>();
+}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Пасеки</h1>
+            <p>Список всех пасек в системе</p>
+        </div>
+
+        <div class="actions-row">
+            <a asp-controller="Apiary"
+            asp-action="Create"
+            class="action-button action-primary">
+                Добавить пасеку
+            </a>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Номер</th>
+                    <th>Название</th>
+                    <th>Владелец</th>
+                    <th>Адрес</th>
+                    <th>Выездная</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var apiary in apiaries)
+                {
+                    <tr>
+                        <td>#@apiary.Id.ToString().PadLeft(4, '0')</td>
+                        <td>@apiary.Name</td>
+                        <td>@apiary.Owner?.LastName @apiary.Owner?.FirstName</td>
+                        <td>@apiary.Address</td>
+                        <td>@(apiary.IsMobile ? "Да" : "Нет")</td>
+                        <td>
+                            <a asp-controller="Apiary"
+                            asp-action="Edit"
+                            asp-route-id="@apiary.Id"
+                            class="action-button action-secondary">
+                                Изменить
+                            </a>
+                        </td>
+                        <td>
+                            @if(apiary.ApiaryStatus == -1)
+                            {
+                                <a asp-controller="Apiary"
+                                   asp-action="Delete"
+                                   asp-route-id="@apiary.Id"
+                                   class="action-button action-danger">
+                                    Удалить
+                                </a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -63,6 +63,11 @@
         color: #4CAF50;
         border: 1px solid #C8E6C9;
     }
+    .apiary-type.for-delete {
+        background: #f5e8e8;
+        color: #af4c4c;
+        border: 1px solid #e6c8c8;
+    }
 
 /* Кнопки действий в шапке */
 .apiary-header-actions {
@@ -141,29 +146,7 @@
     margin-top: auto;
 }
 
-.btn-families {
-    width: 100%;
-    background: linear-gradient(135deg, #FFC107, #FF9800);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-}
 
-    .btn-families:hover {
-        background: linear-gradient(135deg, #FF9800, #F57C00);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
-        color: white;
-        text-decoration: none;
-    }
 
 /* Отсутствие карточек */
 
