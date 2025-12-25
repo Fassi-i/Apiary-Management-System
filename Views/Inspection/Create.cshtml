@@ -29,9 +29,8 @@
            asp-action="Details"
            asp-route-id="@inspVM.BeeColony?.Id"
            class="back-link">
-            ← Назад к списку семей
+            ← Назад к семье
         </a>
-
 
         <form asp-action="Create" method="post" id="beekeeperForm">
             @Html.AntiForgeryToken()
@@ -56,7 +55,7 @@
             <div class="form-row">
                 <div class="form-group required">
                     <label asp-for="Inspection.FoodAmountKg" class="control-label">Корм (кг)</label>
-                    <input asp-for="Inspection.FoodAmountKg" type="number" class="form-control" />
+                    <input asp-for="Inspection.FoodAmountKg" type="number" step="0.1" class="form-control" />
                     <span asp-validation-for="Inspection.FoodAmountKg" class="text-danger"></span>
                 </div>
 
@@ -80,7 +79,6 @@
                 <div class="form-group required">
                     <label asp-for="BeeColony.Number" class="control-label">Номер семьи</label>
                     <input asp-for="BeeColony.Number" class="form-control" readonly />
-
                 </div>
 
                 <div class="form-group">
@@ -96,7 +94,7 @@
                 <div class="form-group">
                     <label asp-for="QueenId" class="control-label">Поменять матку</label>
                     <select asp-for="QueenId"
-                            asp-items="@inspVM.Queens"
+                            asp-items="inspVM.Queens"
                             class="select-input"
                             id="queenSelect">
                     </select>
@@ -106,15 +104,93 @@
                 <div class="form-group">
                     <label asp-for="ApiatyId" class="control-label">Поменять пасеку</label>
                     <select asp-for="ApiatyId"
-                            asp-items="@inspVM.Apearies"
+                            asp-items="inspVM.Apearies"
                             class="select-input"
                             id="apiarySelect">
                     </select>
                     <span asp-validation-for="ApiatyId" class="text-danger"></span>
                 </div>
             </div>
+
             <input asp-for="BeeColony.Id" type="hidden" />
             <input asp-for="Inspection.BeeColonyId" type="hidden" />
+
+            <!-- Блок: заболевания и лечение -->
+            <h3>Заболевания и лечение</h3>
+
+            @if (inspVM.DiseaseTherapies != null && inspVM.DiseaseTherapies.Count > 0)
+            {
+                for (int i = 0; i < inspVM.DiseaseTherapies.Count; i++)
+                {
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Заболевание</label>
+                            <select asp-for="DiseaseTherapies[i].DiseaseId"
+                                    class="select-input">
+                                <option value="">— Нет —</option>
+                                @foreach (var d in inspVM.Diseases ?? new List<Disease>())
+                                {
+                                    <option value="@d.Id">@d.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="DiseaseTherapies[i].TherapyType">Лечение</label>
+                            <input asp-for="DiseaseTherapies[i].TherapyType" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="DiseaseTherapies[i].TherapyStartDate">Начало лечения</label>
+                            <input asp-for="DiseaseTherapies[i].TherapyStartDate" type="date" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DiseaseTherapies[i].TherapyEndDate">Конец лечения</label>
+                            <input asp-for="DiseaseTherapies[i].TherapyEndDate" type="date" class="form-control" />
+                        </div>
+                    </div>
+
+                    <hr />
+                }
+            }
+            else
+            {
+                <!-- На случай, если контроллер вдруг не заполнил список -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Заболевание</label>
+                        <select name="DiseaseTherapies[0].DiseaseId"
+                                class="select-input">
+                            <option value="">— Нет —</option>
+                            @foreach (var d in inspVM.Diseases ?? new List<Disease>())
+                            {
+                                <option value="@d.Id">@d.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Лечение</label>
+                        <input name="DiseaseTherapies[0].TherapyType" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Начало лечения</label>
+                        <input name="DiseaseTherapies[0].TherapyStartDate" type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Конец лечения</label>
+                        <input name="DiseaseTherapies[0].TherapyEndDate" type="date" class="form-control" />
+                    </div>
+                </div>
+
+                <hr />
+            }
+
             <button type="submit" class="btn-submit">
                 Добавить
             </button>

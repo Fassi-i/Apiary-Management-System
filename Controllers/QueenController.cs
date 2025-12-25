@@ -20,21 +20,23 @@ namespace ApiaryManagementSystem.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? apiaryId)
         {
             int ownerId = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
             bool isAdmin = User.IsInRole("Администратор");
             bool isSenior = User.IsInRole("Старший пчеловод") || isAdmin;
 
+            // Базовый запрос маток
             IQueryable<Queen> queensQuery = _context.Queens
                 .Include(q => q.BeeColony)
                     .ThenInclude(c => c.Apiary);
 
+            // Базовый запрос семей для выпадашки "Изменить семью"
             IQueryable<BeeColony> coloniesQuery = _context.BeeColonies
                 .Include(c => c.Apiary);
 
-            // обычный пчеловод — только свои
+            // Обычный пчеловод — только свои
             if (!isSenior)
             {
                 queensQuery = queensQuery
@@ -44,7 +46,28 @@ namespace ApiaryManagementSystem.Controllers
                     .Where(c => c.Apiary.OwnerId == ownerId);
             }
 
+            // ФИЛЬТР по пасеке:
+            // apiaryId == -1  -> "Не прикреплена"
+            // apiaryId == N   -> матки, у которых BeeColony.ApiaryId == N
+            if (apiaryId.HasValue)
+            {
+                if (apiaryId.Value == -1)
+                {
+                    queensQuery = queensQuery
+                        .Where(q => q.BeeColony == null);
+                }
+                else
+                {
+                    queensQuery = queensQuery
+                        .Where(q => q.BeeColony != null &&
+                                    q.BeeColony.ApiaryId == apiaryId.Value);
+                }
+            }
+
+            // Список маток после фильтра
             var queens = await queensQuery.ToListAsync();
+
+            // Список семей для колонки "Изменить семью" (как было)
             var beeColonies = await coloniesQuery
                 .Select(c => new SelectListItem
                 {
@@ -55,8 +78,36 @@ namespace ApiaryManagementSystem.Controllers
 
             ViewBag.BeeColonies = beeColonies;
 
+            // Список пасек для фильтра + "Не прикреплена"
+            var apiaryFilterItems = await _context.Apiaries
+                .OrderBy(a => a.Name)
+                .Select(a => new SelectListItem
+                {
+                    Value = a.Id.ToString(),
+                    Text = a.Name
+                })
+                .ToListAsync();
+
+            // "Не прикреплена" = -1
+            apiaryFilterItems.Insert(0, new SelectListItem
+            {
+                Value = "-1",
+                Text = "Не прикреплена"
+            });
+
+            // "Все пасеки" = пусто
+            apiaryFilterItems.Insert(0, new SelectListItem
+            {
+                Value = "",
+                Text = "Все пасеки"
+            });
+
+            ViewBag.ApiaryFilter = apiaryFilterItems;
+            ViewData["CurrentApiaryFilter"] = apiaryId?.ToString();
+
             return View(queens);
         }
+
 
 
         [HttpPost]

@@ -203,13 +203,10 @@ namespace ApiaryManagementSystem.Controllers
                 .ToListAsync();
 
             ViewBag.Therapies = await _context.Therapies
-                .Include(t => t.TherapyType)
                 .Where(t => t.Inspection.BeeColonyId == id)
                 .ToListAsync();
 
             ViewBag.Products = await _context.ColonyProducts
-                .Include(cp => cp.Product)
-                .Include(cp => cp.Unit)
                 .Where(cp => cp.BeeColonyId == id)
                 .OrderByDescending(cp => cp.HarvestDate)
                 .ToListAsync();
@@ -221,6 +218,7 @@ namespace ApiaryManagementSystem.Controllers
 
             ViewBag.Notes = await _context.Inspections
                 .Where(cn => cn.BeeColonyId == id)
+                .Where(cn => cn.Notes != null)
                 .OrderByDescending(cn => cn.DateTime)
                 .ToListAsync();
 
@@ -263,14 +261,42 @@ namespace ApiaryManagementSystem.Controllers
             await _service.Update(colony);
             return RedirectToAction("Index", "BeeColony", new { apiaryId = colony.ApiaryId });
         }
-
-        [HttpGet]
         [Authorize(Policy = "SeniorBeekeeper")]
-        public async Task<IActionResult> AdminIndex()
+        public async Task<IActionResult> AdminIndex(int? apiaryId)
         {
-            var colonies = await _context.BeeColonies.Include(c => c.Apiary).ToListAsync();
-            return View(colonies);
+            // Список пасек для выпадающего списка (Id + Name)
+            ViewBag.Apiaries = await _context.Apiaries
+                .OrderBy(a => a.Name)
+                .Select(a => new SelectListItem
+                {
+                    Value = a.Id.ToString(), // фильтрация по Id
+                    Text = a.Name            // показываем НАЗВАНИЕ пасеки
+                })
+                .ToListAsync();
+
+            ViewData["CurrentApiary"] = apiaryId?.ToString();
+
+            var query = _context.Apiaries
+                .Include(a => a.Owner)
+                .AsQueryable();
+
+            // ФИЛЬТР: показываем только выбранную пасеку по её Id
+            if (apiaryId.HasValue)
+            {
+                query = query.Where(a => a.Id == apiaryId.Value);
+            }
+
+            var apiaries = await query.ToListAsync();
+
+            return View(apiaries);
         }
+
+
+
+
+
+
+
 
         [HttpGet]
         [Authorize(Policy = "SeniorBeekeeper")]

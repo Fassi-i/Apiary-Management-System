@@ -4,6 +4,7 @@ using ApiaryManagementSystem.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiaryManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20251225103210__9")]
+    partial class _9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -361,13 +364,16 @@ namespace ApiaryManagementSystem.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ColonyDiseaseId")
+                    b.Property<int>("DiseaseId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("InspectionId")
+                    b.Property<int>("InspectioId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("InspectionId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
@@ -378,7 +384,7 @@ namespace ApiaryManagementSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColonyDiseaseId");
+                    b.HasIndex("DiseaseId");
 
                     b.HasIndex("InspectionId");
 
@@ -550,19 +556,17 @@ namespace ApiaryManagementSystem.Migrations
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Therapy", b =>
                 {
-                    b.HasOne("ApiaryManagementSystem.Models.ColonyDisease", "ColonyDisease")
+                    b.HasOne("ApiaryManagementSystem.Models.Disease", "Disease")
                         .WithMany()
-                        .HasForeignKey("ColonyDiseaseId")
+                        .HasForeignKey("DiseaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ApiaryManagementSystem.Models.Inspection", "Inspection")
                         .WithMany()
-                        .HasForeignKey("InspectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InspectionId");
 
-                    b.Navigation("ColonyDisease");
+                    b.Navigation("Disease");
 
                     b.Navigation("Inspection");
                 });

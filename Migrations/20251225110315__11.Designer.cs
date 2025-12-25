@@ -4,6 +4,7 @@ using ApiaryManagementSystem.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiaryManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20251225110315__11")]
+    partial class _11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -361,7 +364,7 @@ namespace ApiaryManagementSystem.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ColonyDiseaseId")
+                    b.Property<int>("DiseaseId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EndDate")
@@ -378,7 +381,7 @@ namespace ApiaryManagementSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColonyDiseaseId");
+                    b.HasIndex("DiseaseId");
 
                     b.HasIndex("InspectionId");
 
@@ -550,9 +553,9 @@ namespace ApiaryManagementSystem.Migrations
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Therapy", b =>
                 {
-                    b.HasOne("ApiaryManagementSystem.Models.ColonyDisease", "ColonyDisease")
+                    b.HasOne("ApiaryManagementSystem.Models.Disease", "Disease")
                         .WithMany()
-                        .HasForeignKey("ColonyDiseaseId")
+                        .HasForeignKey("DiseaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -562,7 +565,7 @@ namespace ApiaryManagementSystem.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ColonyDisease");
+                    b.Navigation("Disease");
 
                     b.Navigation("Inspection");
                 });

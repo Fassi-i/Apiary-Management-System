@@ -4,6 +4,7 @@ using ApiaryManagementSystem.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiaryManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20251225102730__8")]
+    partial class _8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -361,28 +364,49 @@ namespace ApiaryManagementSystem.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ColonyDiseaseId")
+                    b.Property<int>("DiseaseId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("InspectionId")
+                    b.Property<int>("InspectioId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("InspectionId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("TherapyType")
+                    b.Property<int>("TherapyTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiseaseId");
+
+                    b.HasIndex("InspectionId");
+
+                    b.HasIndex("TherapyTypeId");
+
+                    b.ToTable("Therapies");
+                });
+
+            modelBuilder.Entity("ApiaryManagementSystem.Models.TherapyType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColonyDiseaseId");
-
-                    b.HasIndex("InspectionId");
-
-                    b.ToTable("Therapies");
+                    b.ToTable("TherapyType");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.User", b =>
@@ -550,21 +574,27 @@ namespace ApiaryManagementSystem.Migrations
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.Therapy", b =>
                 {
-                    b.HasOne("ApiaryManagementSystem.Models.ColonyDisease", "ColonyDisease")
+                    b.HasOne("ApiaryManagementSystem.Models.Disease", "Disease")
                         .WithMany()
-                        .HasForeignKey("ColonyDiseaseId")
+                        .HasForeignKey("DiseaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ApiaryManagementSystem.Models.Inspection", "Inspection")
                         .WithMany()
-                        .HasForeignKey("InspectionId")
+                        .HasForeignKey("InspectionId");
+
+                    b.HasOne("ApiaryManagementSystem.Models.TherapyType", "TherapyType")
+                        .WithMany()
+                        .HasForeignKey("TherapyTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ColonyDisease");
+                    b.Navigation("Disease");
 
                     b.Navigation("Inspection");
+
+                    b.Navigation("TherapyType");
                 });
 
             modelBuilder.Entity("ApiaryManagementSystem.Models.User", b =>

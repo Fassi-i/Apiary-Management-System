@@ -141,14 +141,46 @@ namespace ApiaryManagementSystem.Controllers
         }
 
         [Authorize(Policy = "SeniorBeekeeper")]
-        public async Task<IActionResult> AdminIndex()
+        public async Task<IActionResult> AdminIndex(int? ownerId, string? search)
         {
-            var apiaries = await _context.Apiaries
-                .Include(a => a.Owner)
+            // список владельцев для фильтра
+            ViewBag.Owners = await _context.Users
+                .OrderBy(u => u.LastName)
+                .ThenBy(u => u.FirstName)
+                .Select(u => new SelectListItem
+                {
+                    Value = u.Id.ToString(),
+                    Text = u.LastName + " " + u.FirstName
+                })
                 .ToListAsync();
+
+            ViewData["CurrentOwner"] = ownerId?.ToString();
+            ViewData["CurrentFilter"] = search;
+
+            var query = _context.Apiaries
+                .Include(a => a.Owner)
+                .AsQueryable();
+
+            if (ownerId.HasValue)
+            {
+                query = query.Where(a => a.OwnerId == ownerId.Value);
+            }
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var term = search.Trim();
+                query = query.Where(a =>
+                    a.Name.Contains(term) ||
+                    a.Address.Contains(term));
+            }
+
+            var apiaries = await query.ToListAsync();
 
             return View(apiaries);
         }
+
+
+
 
         [HttpGet]
         [Authorize(Policy = "SeniorBeekeeper")]

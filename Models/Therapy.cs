@@ -10,12 +10,12 @@ namespace ApiaryManagementSystem.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
-        public int InspectioId { get; set; }
-        public int TherapyTypeId { get; set; }
-        public int DiseaseId { get; set; }
+        public int InspectionId { get; set; }
+        public int ColonyDiseaseId { get; set; }
+
+        public string? TherapyType { get; set; }
 
         public Inspection? Inspection { get; set; }
-        public TherapyType? TherapyType { get; set; }
-        public Disease? Disease { get; set; }
+        public ColonyDisease? ColonyDisease { get; set; }
     }
 }

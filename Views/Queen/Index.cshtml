@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Матки";
     var queens = Model ?? new List<Queen>();
+    var currentApiaryFilter = ViewData["CurrentApiaryFilter"]?.ToString();
 }
 
 <html lang="ru">
@@ -16,6 +17,28 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
+    <style>
+        .actions-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .filter-form {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            max-width: 500px;
+        }
+
+            .filter-form .form-control {
+                flex: 1;
+            }
+    </style>
+
     <div class="container">
         <div class="header">
             <h1>Матки</h1>
@@ -23,6 +46,24 @@
         </div>
 
         <div class="actions-row">
+            <form asp-action="Index" method="get" class="filter-form">
+                <select name="apiaryId"
+                        class="form-control"
+                        style="max-width: 260px;">
+                    @foreach (var item in (IEnumerable<SelectListItem>)ViewBag.ApiaryFilter)
+                    {
+                        <option value="@item.Value"
+                                selected="@(currentApiaryFilter == item.Value ? "selected" : null)">
+                            @item.Text
+                        </option>
+                    }
+                </select>
+
+                <button type="submit" class="action-button action-secondary">
+                    Фильтровать
+                </button>
+            </form>
+
             <a asp-controller="Queen"
                asp-action="Create"
                class="action-button action-primary">

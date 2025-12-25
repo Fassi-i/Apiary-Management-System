@@ -73,6 +73,8 @@ namespace ApiaryManagementSystem.Controllers
             lastInspection.DateTime = DateTime.Now;
             lastInspection.Notes = string.Empty;
 
+            var diseases = await _context.Diseases.ToListAsync();
+
             var vm = new InspectionCreateViewModel(id)
             {
                 Queens = queens,
@@ -80,50 +82,94 @@ namespace ApiaryManagementSystem.Controllers
                 Inspection = lastInspection,
                 Apearies = apearies,
                 ApiatyId = beeColony.ApiaryId,
-                BeeColony = beeColony
+                BeeColony = beeColony,
+                Diseases = diseases,
+                DiseaseTherapies = new List<InspectionDiseaseTherapyItem>
+                {
+                    new InspectionDiseaseTherapyItem()
+                }
             };
 
             return View(vm);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(InspectionCreateViewModel model)
         {
-            // на всякий случай, если Id не пришёл
             if (model.BeeColony == null || model.BeeColony.Id == 0)
                 return BadRequest("Не передан идентификатор семьи");
 
-            // привязка осмотра к семье
-            model.Inspection.BeeColonyId = model.BeeColony.Id;
+            var colonyId = model.BeeColony.Id;
 
-            await _inspectionService.Create(model.Inspection);
+            // 1. Сохраняем осмотр
+            model.Inspection.BeeColonyId = colonyId;
+            _context.Inspections.Add(model.Inspection);
+            await _context.SaveChangesAsync();
+            var inspectionId = model.Inspection.Id;
 
+            // 2. Болезни и лечения
+            if (model.DiseaseTherapies != null)
+            {
+                foreach (var item in model.DiseaseTherapies)
+                {
+                    if (!item.DiseaseId.HasValue)
+                        continue;
+
+                    // создаём конкретный случай болезни
+                    var cd = new ColonyDisease
+                    {
+                        InspectionId = inspectionId,
+                        DiseaseId = item.DiseaseId.Value,
+                        StartDate = model.Inspection.DateTime.Date,
+                        EndDate = null
+                    };
+                    _context.ColonyDiseases.Add(cd);
+                    await _context.SaveChangesAsync(); // нужно, чтобы получить cd.Id
+
+                    // если введено лечение — создаём Therapy и привязываем к этому ColonyDisease
+                    if (!string.IsNullOrWhiteSpace(item.TherapyType) ||
+                        item.TherapyStartDate.HasValue ||
+                        item.TherapyEndDate.HasValue)
+                    {
+                        var therapy = new Therapy
+                        {
+                            InspectionId = inspectionId,
+                            ColonyDiseaseId = cd.Id,
+                            TherapyType = item.TherapyType,
+                            StartDate = item.TherapyStartDate ?? model.Inspection.DateTime.Date,
+                            EndDate = item.TherapyEndDate ?? model.Inspection.DateTime.Date
+                        };
+                        _context.Therapies.Add(therapy);
+                    }
+                }
+            }
+
+            // Смена матки
             if (model.QueenId.HasValue)
             {
                 var queen = await _context.Queens
                     .FirstOrDefaultAsync(q => q.Id == model.QueenId.Value);
 
                 if (queen != null)
-                {
-                    queen.BeeColonyId = model.BeeColony.Id;
-                }
+                    queen.BeeColonyId = colonyId;
             }
 
+            // Смена пасеки
             if (model.ApiatyId.HasValue)
             {
                 var colony = await _context.BeeColonies
-                    .FirstOrDefaultAsync(c => c.Id == model.BeeColony.Id);
+                    .FirstOrDefaultAsync(c => c.Id == colonyId);
 
                 if (colony != null)
-                {
                     colony.ApiaryId = model.ApiatyId.Value;
-                }
             }
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Details", "BeeColony", new { id = model.BeeColony.Id });
+            return RedirectToAction("Details", "BeeColony", new { id = colonyId });
         }
+
 
     }
 }

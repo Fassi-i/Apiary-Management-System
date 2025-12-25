@@ -3,6 +3,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ApiaryManagementSystem.ViewModels
 {
+    public class InspectionDiseaseTherapyItem
+    {
+        public int? DiseaseId { get; set; }
+        public string? TherapyType { get; set; }
+        public DateTime? TherapyStartDate { get; set; }
+        public DateTime? TherapyEndDate { get; set; }
+    }
+
     public class InspectionCreateViewModel
     {
         public Inspection? Inspection { get; set; }
@@ -16,6 +24,8 @@ namespace ApiaryManagementSystem.ViewModels
         public List<Therapy>? Therapy { get; set; }
         public List<string>? Notes { get; set; }
 
+        public List<InspectionDiseaseTherapyItem> DiseaseTherapies { get; set; } = new();
+
         public InspectionCreateViewModel() { }
         public InspectionCreateViewModel(int id)
         {
@@ -23,4 +33,5 @@ namespace ApiaryManagementSystem.ViewModels
             BeeColony.Id = id;
         }
     }
+
 }

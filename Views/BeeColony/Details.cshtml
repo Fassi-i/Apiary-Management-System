@@ -273,6 +273,9 @@
         <h3 class="section-title">Заболевания и лечение</h3>
         @if (ViewBag.Diseases != null && ((List<ColonyDisease>)ViewBag.Diseases).Any())
         {
+            var diseases = (List<ColonyDisease>)ViewBag.Diseases;
+            var therapies = ViewBag.Therapies as List<Therapy> ?? new List<Therapy>();
+
             <table class="data-table">
                 <thead>
                     <tr>
@@ -285,38 +288,46 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var disease in (List<ColonyDisease>)ViewBag.Diseases)
+                    @foreach (var disease in diseases)
                     {
-                        <tr>
-                            <td>@disease.Disease?.Name</td>
-                            <td>@disease.StartDate.ToString("dd.MM.yyyy")</td>
-                            <td>@disease.EndDate?.ToString("dd.MM.yyyy")</td>
+                        var diseaseTherapies = therapies
+                        .Where(t => t.ColonyDiseaseId == disease.Id)
+                        .ToList();
 
-                            @if (ViewBag.Therapies != null)
+                        if (!diseaseTherapies.Any())
+                        {
+                            <tr>
+                                <td>@disease.Disease?.Name</td>
+                                <td>@disease.StartDate.ToString("dd.MM.yyyy")</td>
+                                <td>@disease.EndDate?.ToString("dd.MM.yyyy")</td>
+                                <td colspan="3">Лечение не назначено</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            var first = diseaseTherapies.First();
+
+                            <tr>
+                                <td>@disease.Disease?.Name</td>
+                                <td>@disease.StartDate.ToString("dd.MM.yyyy")</td>
+                                <td>@disease.EndDate?.ToString("dd.MM.yyyy")</td>
+                                <td>@first.TherapyType</td>
+                                <td>@first.StartDate.ToString("dd.MM.yyyy")</td>
+                                <td>@first.EndDate.ToString("dd.MM.yyyy")</td>
+                            </tr>
+
+                            @foreach (var t in diseaseTherapies.Skip(1))
                             {
-                                var therapies = ((List<Therapy>)ViewBag.Therapies)
-                                .Where(t => t.DiseaseId == disease.DiseaseId)
-                                .ToList();
-                                <td>
-                                    @foreach (var therapy in therapies)
-                                    {
-                                        @therapy.TherapyType?.Name <br />
-                                    }
-                                </td>
-                                <td>
-                                    @foreach (var therapy in therapies)
-                                    {
-                                        @therapy.StartDate.ToString("dd.MM.yyyy") <br />
-                                    }
-                                </td>
-                                <td>
-                                    @foreach (var therapy in therapies)
-                                    {
-                                        @therapy.EndDate.ToString("dd.MM.yyyy") <br />
-                                    }
-                                </td>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>@t.TherapyType</td>
+                                    <td>@t.StartDate.ToString("dd.MM.yyyy")</td>
+                                    <td>@t.EndDate.ToString("dd.MM.yyyy")</td>
+                                </tr>
                             }
-                        </tr>
+                        }
                     }
                 </tbody>
             </table>
@@ -326,8 +337,10 @@
             <p>Заболевания не зафиксированы</p>
         }
 
-        <hr class="section-divider" />
 
+
+        <hr class="section-divider" />
+        @*
         <!-- Собранная продукция -->
         <h3 class="section-title">Собранная продукция</h3>
         @if (ViewBag.Products != null && ((List<ColonyProduct>)ViewBag.Products).Any())
@@ -346,9 +359,8 @@
                     {
                         <tr>
                             <td>@product.HarvestDate.ToString("dd.MM.yyyy")</td>
-                            <td>@product.Product?.Name</td>
+                            <td>@product.Product.ToString()</td>
                             <td>@product.Amount</td>
-                            <td>@product.Unit?.Name</td>
                         </tr>
                     }
                 </tbody>
@@ -379,7 +391,7 @@
         }
 
         <hr class="section-divider" />
-
+        *@
         <!-- Заметки -->
         <h3 class="section-title">Заметки</h3>
         @if (ViewBag.Notes != null && ((List<Inspection>)ViewBag.Notes).Any())
